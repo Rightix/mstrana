@@ -1,0 +1,1019 @@
+// * Fonts
+@font-face
+  font-family: 'Shnobel'
+  src: local('Shnobel Oblique'), local('Shnobel-Oblique'), url('../fonts/Shnobeloblique.woff2') format('woff2'), url('../fonts/Shnobeloblique.woff') format('woff'), url('../fonts/Shnobeloblique.ttf') format('truetype')
+  font-weight: 400
+  font-style: italic
+
+@font-face
+  font-family: 'Shnobel'
+  src: local('Shnobel Regular'), local('Shnobel-Regular'), url('../fonts/Shnobelregular.woff2') format('woff2'), url('../fonts/Shnobelregular.woff') format('woff'), url('../fonts/Shnobelregular.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+@font-face
+  font-family: 'Flow Ext'
+  src: local('Flow Ext'), local('FlowExt'), url('../fonts/flowext.woff2') format('woff2'), url('../fonts/flowext.woff') format('woff'), url('../fonts/flowext.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+@font-face
+  font-family: 'Flow Ext'
+  src: local('Flow Ext Bold'), local('FlowExt-Bold'), url('../fonts/flowextbold.woff2') format('woff2'), url('../fonts/flowextbold.woff') format('woff'), url('../fonts/flowextbold.ttf') format('truetype')
+  font-weight: 700
+  font-style: normal
+// * Basic / Content
+body
+  color: #000
+  font: 0.625em/1.5 "Flow Ext", sans-serif
+  overflow-x: hidden
+  height: 100%
+
+html
+  height: 100%
+
+.wrapper
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  height: 100%
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Bitter", serif
+  color: #000
+  clear: both
+
+h1
+  font-size: 90px
+  //font-weight: 600
+  //margin: 53px 0 20px
+  line-height: 88px
+//letter-spacing: -0.03em
+//margin: 0.25em 0 .8em
+
+h2
+  //margin: 33px 0 11px
+  font-size: 34px
+  line-height: 40px
+  margin: 1.4em 0 .35em
+  font-weight: 700
+
+h3
+  font-size: 32px
+  font-weight: 400
+  line-height: 38px
+  margin: 1.5em 0 .48em
+
+h4
+  font-size: 28px
+  line-height: 34px
+  margin: 1.2em 0 .6em
+  font-weight: 400
+
+h5
+  font-size: 21px
+  font-weight: 400
+  line-height: 28px
+  text-transform: uppercase
+  letter-spacing: 0.04em
+  //margin: 28px 0 17px
+  margin: 2.4em 0 1em
+
+h6
+  font-size: 17px
+  font-weight: 700
+  //margin: 22px 0 15px
+  margin: 1.6em 0 .8em
+  letter-spacing: 0.06em
+  line-height: 24px
+  text-transform: uppercase
+
+p
+//font-size: 16px
+//line-height: 24px
+
+a
+  text-decoration: underline
+
+  &:hover
+    text-decoration: none
+
+//  Статика
+
+.float-right
+  float: right
+
+.float-left
+  float: left
+
+.content
+  a
+    color: #E0581E
+    text-decoration: none
+
+    &:visited
+      color: #A37F5E
+
+  img
+    max-width: 100%
+
+  figure
+    margin: 0
+    margin-bottom: 40px
+    //display: inline-table
+    //text-align: justify
+    //width: 1px
+    figcaption
+      line-height: 19px
+      font-size: 14px
+      text-align: left
+      margin-top: 12px
+      color: #8D8D8D
+
+    &.float-right
+      margin-left: 60px
+      padding-top: 10px
+
+    &.float-left
+      margin-right: 60px
+      padding-top: 10px
+
+  p
+    color: #5E5E5E
+    margin-bottom: 25px
+    //font-family: Arial
+    font-size: 17px
+    line-height: 28px
+
+    &:last-child
+      margin-bottom: 0
+
+  iframe
+    max-width: 100% !important
+    margin: 25px 0
+
+  p + ul, p + ol
+    margin-top: -10px
+
+  ul
+    list-style-type: none
+    padding-left: 50px
+    margin: 10px 0 30px
+    font-size: 16px
+    line-height: 24px
+    color: #5E5E5E
+
+    li
+      margin-bottom: 5px
+      position: relative
+
+      ul
+        margin-top: 5px
+        margin-bottom: 5px
+        padding-left: 45px
+
+        li
+          margin-bottom: 5px
+          position: relative
+
+          &:before
+            background: #5F8F00
+
+          ul
+            li
+              &:before
+                background: #5F8F00
+
+              ul
+                li
+                  &:before
+                    background: #5F8F00
+
+      &:before
+        content: ''
+        display: inline-block
+        width: 6px
+        height: 6px
+        background: #5F8F00
+        border-radius: 50%
+        position: absolute
+        left: -18px
+        //top: 6px
+        top: 0.6em
+        margin-right: 12px
+
+  ol
+
+    counter-reset: a
+    padding-left: 50px
+    margin: 10px 0 30px
+    line-height: 28px
+    font-size: 17px
+    color: #5E5E5E
+
+    li
+      list-style: none
+      margin-bottom: 5px
+      position: relative
+
+      &:before
+        counter-increment: a
+        content: counter(a) "."
+        display: inline-block
+        margin-right: 7px
+        color: #E0581E
+        font-size: 17px
+        font-weight: 400
+        position: absolute
+        left: -23px
+        top: 0
+
+      ol
+        counter-reset: b
+        margin-bottom: 5px
+        margin-top: 5px
+        padding-left: 45px
+
+        li
+          margin-bottom: 5px
+
+          &:before
+            counter-increment: b
+            font-weight: 400
+            content: counter(a) "." counter(b) "."
+            display: inline-block
+            margin-right: 7px
+            color: #E0581E
+            font-size: 17px
+            left: -35px
+            top: 0
+            position: absolute
+
+          ol
+            counter-reset: c
+
+            li
+              &:before
+                counter-increment: c
+                content: counter(a) "." counter(b) "." counter(c) "."
+                margin-right: 7px
+                display: inline-block
+                color: #E0581E
+                font-size: 17px
+                top: 0
+                font-weight: 400
+                left: -45px
+                position: absolute
+
+              ul li
+                &:before
+                  left: -51px
+
+  blockquote
+    font-size: 28px
+    font-weight: 500
+    padding: 50px 0px
+    line-height: 35px
+    margin: 50px auto 50px
+    position: relative
+    z-index: 1
+    font-family: "Bitter", serif
+
+    &:before
+      content: ''
+      position: absolute
+      left: -70px
+      right: -70px
+      z-index: -1
+      background: #FBEBD9
+      top: 0px
+      bottom: 0
+      z-index: -1
+
+    .author
+      font-size: 16px
+      font-family: "Lato", sans-serif
+      line-height: 28px
+      text-align: right
+      margin-top: 15px
+
+  table
+    color: #5E5E5E
+    border-spacing: 0
+    border-collapse: collapse
+    //margin-top: 58px
+    //margin-bottom: 58px
+    overflow-x: auto
+    margin: 20px 0 50px
+
+    caption
+      text-align: left
+      display: block
+      font-size: 17px
+      text-transform: uppercase
+      letter-spacing: .06em
+      line-height: 22px
+      font-weight: 700
+      margin-bottom: 21px
+      color: #231d1f
+      min-width: 300px
+      width: 100%
+      padding: 0
+
+    tr
+      td
+        padding: 13px 25px
+        font-size: 17px
+        font-weight: 400
+        line-height: 28px
+        border: 1px solid #D6B084
+        vertical-align: top
+        background: none
+
+      th
+        border: 1px solid #D6B084
+        background: #FFF4E8
+        font-size: 13px
+        line-height: 28px
+        font-weight: 400
+        color: #D06400
+        padding: 14px 25px
+        letter-spacing: 0.06em
+        text-transform: uppercase
+
+.form
+  background: #FF981F
+  position: relative
+  z-index: 1
+  padding-top: 85px
+  padding-bottom: 54px
+
+  a
+    color: #D6001F
+
+    strong
+
+  input.error, textarea.error, select.error, .checkbox-custom.error
+  //box-shadow: inset 0 0 20px -3px rgba(255, 194, 135, 0.57)
+  &-row
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+
+    &:last-of-type
+      margin-bottom: 0
+
+    &--only-checkbox
+      padding-top: 6px
+      padding-bottom: 12px
+
+    &__label
+      color: #231d1f
+
+    &__info
+      width: 100%
+      font-size: 14px
+      line-height: 21px
+      font-weight: 300
+      //font-style: italic
+      color: #888888
+      margin: 15px 0 0
+
+  &__caption
+    font-size: 16px
+    line-height: 24px
+    color: #231d1f
+    width: 300px
+    flex-shrink: 0
+    margin-right: 30px
+
+  &__area
+    width: 100%
+    position: relative
+    flex-shrink: 0
+
+    &--half-width
+      width: 30%
+
+    &--small
+      width: 49%
+
+    &--big
+      width: 50%
+
+    &--tiny
+      width: 16%
+
+  select
+    height: 42px
+
+.error .form__title
+  color: #c31c00
+
+.has-error ~ .form__title
+  color: #fe8212
+
+.form-error
+  //background: #ffecd9
+  //border: 1px solid #c72b11
+  color: #fff
+  position: relative
+  line-height: 21px
+  border-radius: 4px
+  padding: 56px 65px 51px 105px
+  margin-bottom: 30px
+  font-size: 18px
+  line-height: 27px
+  font-weight: 500
+  z-index: 1
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -200%
+    right: -200%
+    background: #2F348B
+    z-index: -1
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    background: url("../svg/form-error.svg") no-repeat
+    width: 70px
+    height: 70px
+
+  ul
+    margin: 6px 0
+    margin-bottom: 0
+    padding-left: 0px
+
+  ul li
+    color: #fff
+    margin-bottom: 3px
+    list-style: none
+
+    &:last-of-type
+      margin-bottom: 0
+
+    &:before
+      content: ''
+      width: 4px
+      height: 4px
+      background: #c31c00
+      border-radius: 4px
+      left: -12px
+      top: 8px
+
+.form-error + .form-row
+  padding-top: 10px
+
+.input-search
+  border: 1px solid #9d9c9c
+  border-radius: 100px
+  background: #fff
+  height: 50px
+  font-size: 12px
+  color: #231d1f
+  padding: 0 19px
+  width: 100%
+
+  &:focus
+    outline: none
+
+  &__icon
+    position: absolute
+    width: 24px
+    height: 24px
+    top: 0
+    bottom: 5px
+    right: 20px
+    margin: auto
+    background: none
+    border: none
+    cursor: pointer
+
+    &:focus
+      outline: none
+
+    svg
+      width: 24px
+      height: 24px
+
+  &:hover
+    color: #231d1f
+
+.input-select
+  border: 1px solid #9d9c9c
+  border-radius: 100px
+  background: #fff url(../svg/select-arrow.svg)
+  background-repeat: no-repeat
+  background-position: 93%
+  height: 50px
+  font-size: 12px
+  color: #231d1f
+  padding: 0 19px
+  width: 100%
+  font-weight: 400
+
+.input
+  &-line
+    width: 100%
+
+    input
+      width: 100%
+      padding: 9px 14px
+
+    textarea
+      padding: 9px 14px
+
+  &-row
+    display: flex
+
+    .input-line
+      margin-right: 30px
+
+      &:last-of-type
+        margin-right: 0
+
+  &-text
+    border-radius: 5px
+    background: #fff
+    border: none
+    font-size: 18px
+    line-height: 28px
+    height: 45px
+
+    &::placeholder
+      color: #8d8d8d
+
+  &-textarea
+    border-radius: 5px
+    background: #fff
+    border: none
+    font-size: 18px
+    line-height: 28px
+
+.form-row.required
+  position: relative
+
+  &:after
+    content: 'Обязательное поле'
+    position: relative
+    font-size: 12px
+    line-height: 23px
+    margin-left: 15px
+    flex-shrink: 0
+    color: #ffffff
+
+textarea
+  width: 100% !important
+  min-height: 140px !important
+  border: 1px solid #9D9C9C
+  border-radius: 27px
+  padding: 15px 20px
+  color: #3a3a3a
+  line-height: 20px
+  font-size: 12px
+
+  &:focus
+    //box-shadow: 0 0 1px 1px rgba(0, 144, 255, 0.54)
+    outline: none
+
+select
+  cursor: pointer
+  border: 1px solid #d3d3d3
+  font-size: 18px
+  line-height: 21px
+  font-weight: 700
+  padding: 0 36px 0 15px
+  width: 100%
+  background: #ffffff url("../svg/select-arrow.svg")
+  background-position: 93% center
+  background-repeat: no-repeat
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  transition: .3s
+
+  &:focus
+    outline: none
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 144, 255, 0.54)
+    -moz-box-shadow: 0 0 1px 1px rgba(0, 144, 255, 0.54)
+    box-shadow: 0 0 1px 1px rgba(0, 144, 255, 0.54)
+    transition: .3s
+
+select::-ms-expand
+  display: none
+
+input.form__file-name
+  //border: 1px solid #ce5c01
+  font-size: 16px
+  line-height: 19px
+  font-weight: 500
+  padding: 6px 15px
+  width: 100%
+  margin-right: 20px
+  //border-radius: 4px
+  height: 50px
+//background: #ffffff
+//margin-right: 10px
+.form__file input[type="file"]
+  display: none
+/* Обязательно скрываем настоящий Input File */
+
+.attach__file
+  font-size: 16px
+  line-height: 24px
+  text-decoration: underline
+  color: #ff6f00
+  display: flex
+  align-items: center
+  flex-shrink: 0
+  margin-right: 20px
+
+.form-icon__file
+  height: 20px
+  width: 20px
+  margin-right: 7px
+
+.form-button
+  background: #D6001F
+  border-radius: 0px 15px
+  padding: 17px 21px 20px
+  text-align: center
+  font-size: 18px
+  line-height: 23px
+  font-weight: 600
+  border: none
+  color: #ffffff
+  display: inline-flex
+  align-items: center
+  outline: none
+  transition: .4s
+  cursor: pointer
+
+  &:hover
+    color: #ffffff
+    background: #bf0520
+    outline: none
+    //box-shadow:  1px 1px 8px -1px rgba(88, 88, 88, 0.8)
+    transition: .4s
+
+  &:focus
+    color: #ffffff
+    background: rgba(191, 5, 32, 0.58)
+    outline: none
+    //box-shadow:  1px 1px 8px -1px rgba(88, 88, 88, 0.8)
+    transition: .4s
+
+.form__file
+  position: relative
+  display: flex
+  width: 100%
+  cursor: pointer
+  margin-bottom: 0
+
+  .form-button
+    //opacity: 0
+    //visibility: hidden
+    //display: none
+    height: 40px
+    align-items: center
+    padding: 6px 15px
+    z-index: 0
+    font-size: 14px
+    border: 2px solid #ce5c01
+    color: #606060
+    background: #ffffff
+    flex-shrink: 0
+    transition: .4s
+
+    &:hover
+      background: #ce5c01
+      color: #ffffff
+      transition: .4s
+
+label
+  margin-bottom: 0
+
+.checkbox
+  cursor: pointer
+  color: #808080
+  line-height: 24px
+  font-size: 20px
+  //margin: 9px 0
+  display: flex
+  align-items: flex-start
+
+  &.has-error
+    .checkbox-custom
+      border: 1px solid #c72b11
+
+  &__label
+    display: inline-block
+    vertical-align: bottom
+    font-size: 18px
+    line-height: 24px
+    color: #000
+
+    a
+      color: #fff
+      text-decoration: none
+
+  input[type=checkbox]
+    //display: none !important
+    visibility: hidden
+    opacity: 0
+    position: absolute
+
+  .checkbox__custom
+    position: relative
+    width: 30px
+    height: 30px
+    margin-right: 13px
+    background: #ffffff
+    display: inline-flex
+    border-radius: 5px
+    flex-shrink: 0
+    transition: .3s
+    top: 6px
+
+    &:hover
+      transition: .3s
+//box-shadow: 0 0 5px #c35e00
+
+.checkbox input:checked + .checkbox__custom::before
+  content: ""
+  display: block
+  position: absolute
+  top: 0px
+  left: 0px
+  bottom: 0
+  right: 0
+  margin: auto
+  background: url(../svg/check.svg) no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  width: 17px
+  height: 14px
+
+.checkbox:checked + .checkbox__custom
+  border: 1px solid #c76203
+//box-shadow: 0 0 5px #c35e00
+
+.radio-wrapper
+  margin-right: 13px
+  margin-bottom: 0
+  display: inline-block
+  margin-right: 55px
+
+  .caption
+    display: inline-block
+    line-height: 20px
+    font-size: 14px
+    color: #444444
+
+  input[type="radio"]
+    display: none
+
+    &:checked + .radio-custom:before
+      position: absolute
+      content: ''
+      display: block
+      width: 12px
+      height: 12px
+      border-radius: 8px
+      background: #231d1f
+      top: 0px
+      left: 0px
+      bottom: 0
+      right: 0
+      margin: auto
+
+  .radio-custom
+    vertical-align: middle
+    display: inline-block
+    width: 24px
+    height: 24px
+    border: 1px solid #C4C4C4
+    border-radius: 16px
+    position: relative
+    cursor: pointer
+    margin-right: 12px
+    transition: .2s
+    background: #fff
+
+    &:hover
+      border: #929292 1px solid
+      transition: .2s
+// Template
+.start
+  &-page
+    height: 100%
+    background: url("../../img/start_bg.png") no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+
+  &-logotype
+    top: 65px
+    left: 70px
+    position: absolute
+
+.main
+  &-page
+    background: url("../../img/bricks.png") repeat
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 18px
+      left: -200%
+      right: -200%
+      height: 804px
+      background: url("../../img/grey_street.png") repeat
+      background-position: center
+  &-header
+    padding-top: 26px
+    position: relative
+    &-contacts
+      font-weight: 700
+      a
+        text-decoration: none
+      &-right
+        display: flex
+        flex-direction: column
+      &--main
+        position: absolute
+        top: 67px
+        display: flex
+        justify-content: center
+        margin: 0 auto
+        left: 0
+        right: 0
+        .main-header-contacts__address
+          margin-right: 210px
+      &__address
+        font-size: 16px
+        line-height: 23px
+        text-align: right
+        letter-spacing: 0.006em
+        color: #757575
+      &__phone
+        font-size: 16px
+        line-height: 23px
+        letter-spacing: 0.006em
+        color: #757575
+        position: relative
+        svg
+          width: 14px
+          height: 14px
+          margin-right: 5px
+          position: relative
+          top: 2px
+      &__mail
+        font-size: 16px
+        line-height: 23px
+        letter-spacing: 0.006em
+        color: #000
+        position: relative
+        svg
+          width: 14px
+          height: 14px
+          margin-right: 5px
+          position: relative
+          top: 2px
+  &-menu
+    display: flex
+    justify-content: center
+    &__item
+      font-family: 'Shnobel', serif
+      font-size: 22px
+      line-height: 20px
+      color: #b28730
+      text-decoration: none
+      margin-right: 34px
+      padding-top: 8px
+      &:last-child
+        margin-right: 0
+      & + .main-menu__logo
+        margin-left: -14px
+    &__logo
+      margin-right: 20px
+  &-page-footer
+    max-width: 220px
+    position: absolute
+    bottom: 18px
+    left: 0
+    right: 0
+    margin: 0 auto
+    color: #757575
+    font-size: 12px
+    line-height: 17px
+    text-align: center
+    z-index: 25
+    a
+      color: #757575
+      text-decoration: none
+    span
+      display: block
+      margin-bottom: 18px
+      &:last-child
+        margin-bottom: 0
+  &-houses
+    height: 903px
+    position: relative
+    width: 1045px
+    overflow: hidden
+    margin: -56px auto 0
+    &__area
+      position: absolute
+      width: 380px
+      height: 571px
+      background: url("../../img/square.png")
+      background-size: cover
+      top: 374px
+      left: 336px
+      z-index: 5
+    &__tourist
+      width: 74px
+      height: 102px
+      position: absolute
+      top: 374px
+      left: 357px
+      z-index: 6
+      background: url("../../img/tourist.png")
+    &__grandba
+      position: absolute
+      top: 536px
+      right: 357px
+      background: url("../../img/grandba.png")
+      width: 45px
+      z-index: 6
+      height: 92px
+    &__woman
+      position: absolute
+      top: 646px
+      left: 459px
+      background: url("../../img/woman.png")
+      width: 50px
+      height: 105px
+      z-index: 6
+  &-house
+    cursor: pointer
+    position: absolute
+    &.gallery
+      background: url("../../img/house_gallery.png")
+      background-size: cover
+      width: 294px
+      height: 354px
+      top: 0
+      left: 0
+      z-index: 10
+    &.school
+      width: 475px
+      height: 325px
+      top: 58px
+      left: 283px
+      background: url("../../img/house_school.png")
+      z-index: 10
+    &.showroom
+      top: 324px
+      left: 18px
+      width: 299px
+      height: 307px
+      z-index: 15
+      background: url("../../img/house_showroom.png")
+    &.shop
+      width: 295px
+      height: 354px
+      right: 0
+      top: 4px
+      z-index: 10
+      background: url("../../img/house_shop.png")
+    &.museum
+      width: 300px
+      height: 339px
+      right: 24px
+      top: 301px
+      z-index: 15
+      background: url("../../img/house_shop.png")
+    &.theater
+      width: 313px
+      height: 328px
+      left: 122px
+      top: 570px
+      z-index: 20
+      background: url("../../img/house_theater.png")
+    &.workshop
+      width: 267px
+      height: 279px
+      right: 154px
+      top: 624px
+      z-index: 20
+      background: url("../../img/house_workshop.png")
+
