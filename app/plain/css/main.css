@@ -1015,12 +1015,14 @@ label {
   margin: 0 auto; }
 
 .history-body {
-  padding: 56px 0 75px;
+  padding: 18px 0 75px;
   background: #E3D2BD; }
+  .history-body .breadcrumbs {
+    margin-bottom: 45px; }
   .history-body__title {
     font-family: 'Shnobel', serif;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     margin: 0 auto 30px;
     text-align: center;
     font-size: 55px;
@@ -1247,8 +1249,8 @@ footer {
       text-decoration: none; }
 
 .team-page {
-  padding: 74px 0 590px;
-  background: #827866;
+  padding: 22px 0 590px;
+  background: #8F8163;
   position: relative; }
   .team-page:before {
     content: '';
@@ -1326,3 +1328,26 @@ footer {
       line-height: 20px;
       text-align: center;
       color: #FFE9CA; }
+
+.team-page .breadcrumbs a {
+  color: #E3D2BD;
+  position: relative; }
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 26px; }
+  .breadcrumbs a {
+    color: #A08255;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.006px;
+    position: relative;
+    text-decoration: none; }
+    .breadcrumbs a:after {
+      content: ' /'; }
