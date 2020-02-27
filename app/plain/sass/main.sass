@@ -37,54 +37,60 @@ html
   height: 100%
 
 h1, h2, h3, h4, h5, h6
-  font-family: "Bitter", serif
+  font-family: "Shnobel", serif
   color: #000
+  font-weight: 400
   clear: both
 
 h1
-  font-size: 90px
+  font-size: 55px
   //font-weight: 600
   //margin: 53px 0 20px
-  line-height: 88px
+  line-height: 55px
 //letter-spacing: -0.03em
 //margin: 0.25em 0 .8em
 
 h2
   //margin: 33px 0 11px
-  font-size: 34px
-  line-height: 40px
-  margin: 1.4em 0 .35em
-  font-weight: 700
-
+  font-size: 35px
+  line-height: 42px
+  margin: 1.7em 0 .65em
+  font-weight: 400
+  color: #8E491C
+  letter-spacing: 0.01em
 h3
-  font-size: 32px
+  font-size: 30px
   font-weight: 400
   line-height: 38px
-  margin: 1.5em 0 .48em
-
+  color: #793F1A
+  margin: 1.5em 0 .65em
+  letter-spacing: 0.01em
 h4
-  font-size: 28px
+  font-size: 26px
   line-height: 34px
   margin: 1.2em 0 .6em
   font-weight: 400
+  letter-spacing: 0.01em
+  color: #603215
 
 h5
-  font-size: 21px
+  font-size: 22px
   font-weight: 400
   line-height: 28px
   text-transform: uppercase
-  letter-spacing: 0.04em
+  letter-spacing: 0.03em
   //margin: 28px 0 17px
   margin: 2.4em 0 1em
+  color: #000
 
 h6
-  font-size: 17px
-  font-weight: 700
+  font-size: 19px
+  font-weight: 400
   //margin: 22px 0 15px
   margin: 1.6em 0 .8em
   letter-spacing: 0.06em
-  line-height: 24px
-  text-transform: uppercase
+  line-height: 38px
+  color: #000
 
 p
 //font-size: 16px
@@ -103,17 +109,23 @@ a
 
 .float-left
   float: left
-
+hr
+  background: url("../../img/separator.png") no-repeat
+  background-size: cover
+  margin: 34px -64px
+  border: none
+  height: 28px
 .content
   a
-    color: #E0581E
+    color: #BB4604
     text-decoration: none
-
     &:visited
-      color: #A37F5E
-
+      color: #757575
+    &:hover
+      color: #000
   img
     max-width: 100%
+    height: auto
 
   figure
     margin: 0
@@ -122,27 +134,25 @@ a
     //text-align: justify
     //width: 1px
     figcaption
-      line-height: 19px
-      font-size: 14px
+      line-height: 20px
+      font-size: 15px
       text-align: left
       margin-top: 12px
-      color: #8D8D8D
+      color: #AC693E
 
     &.float-right
-      margin-left: 60px
+      margin-left: 40px
       padding-top: 10px
 
     &.float-left
-      margin-right: 60px
+      margin-right: 40px
       padding-top: 10px
-
   p
     color: #000
-    margin-bottom: 25px
+    margin-bottom: 24px
     //font-family: Arial
-    font-size: 17px
-    line-height: 28px
-
+    font-size: 18px
+    line-height: 24px
     &:last-child
       margin-bottom: 0
 
@@ -152,14 +162,19 @@ a
 
   p + ul, p + ol
     margin-top: -10px
-
+  hr
+    background: url("../../img/separator.png") no-repeat
+    background-size: cover
+    margin: 34px -64px
+    border: none
+    height: 28px
   ul
     list-style-type: none
-    padding-left: 50px
-    margin: 10px 0 30px
+    padding-left: 55px
+    margin: 24px 0 24px
     font-size: 16px
     line-height: 24px
-    color: #5E5E5E
+    color: #674B38
 
     li
       margin-bottom: 5px
@@ -168,46 +183,44 @@ a
       ul
         margin-top: 5px
         margin-bottom: 5px
-        padding-left: 45px
+        padding-left: 32px
 
         li
           margin-bottom: 5px
           position: relative
 
           &:before
-            background: #5F8F00
 
           ul
             li
               &:before
-                background: #5F8F00
 
               ul
                 li
                   &:before
-                    background: #5F8F00
 
       &:before
-        content: ''
+        content: '•'
         display: inline-block
-        width: 6px
-        height: 6px
-        background: #5F8F00
-        border-radius: 50%
+        font-size: 18px
+        line-height: 24px
+        letter-spacing: 0.006em
         position: absolute
         left: -18px
         //top: 6px
-        top: 0.6em
-        margin-right: 12px
+        top: 2px
+        font-family: 'Flow Ext', serif
+        margin-right: 6px
+        color: #BB4604
 
   ol
 
     counter-reset: a
-    padding-left: 50px
+    padding-left: 55px
     margin: 10px 0 30px
     line-height: 28px
     font-size: 17px
-    color: #5E5E5E
+    color: #000
 
     li
       list-style: none
@@ -219,18 +232,18 @@ a
         content: counter(a) "."
         display: inline-block
         margin-right: 7px
-        color: #E0581E
+        color: #BB4604
         font-size: 17px
         font-weight: 400
         position: absolute
-        left: -23px
+        left: -16px
         top: 0
 
       ol
         counter-reset: b
         margin-bottom: 5px
         margin-top: 5px
-        padding-left: 45px
+        padding-left: 38px
 
         li
           margin-bottom: 5px
@@ -241,49 +254,53 @@ a
             content: counter(a) "." counter(b) "."
             display: inline-block
             margin-right: 7px
-            color: #E0581E
+            color: #BB4604
             font-size: 17px
-            left: -35px
+            left: -27px
             top: 0
             position: absolute
+            letter-spacing: 0.1em
 
           ol
             counter-reset: c
-
+            padding-left: 38px
             li
               &:before
                 counter-increment: c
                 content: counter(a) "." counter(b) "." counter(c) "."
                 margin-right: 7px
                 display: inline-block
-                color: #E0581E
+                color: #BB4604
                 font-size: 17px
                 top: 0
                 font-weight: 400
-                left: -45px
+                left: -41px
                 position: absolute
+                letter-spacing: 0.1em
 
               ul li
                 &:before
                   left: -51px
 
   blockquote
-    font-size: 28px
-    font-weight: 500
-    padding: 50px 0px
-    line-height: 35px
+    clear: both
+    font-size: 24px
+    font-weight: 700
+    padding: 46px 0px
+    line-height: 32px
     margin: 50px auto 50px
     position: relative
+    letter-spacing: 0.06em
     z-index: 1
-    font-family: "Bitter", serif
-
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35)
+    color: #FFFBDE
     &:before
       content: ''
       position: absolute
-      left: -70px
-      right: -70px
+      left: -200%
+      right: -200%
       z-index: -1
-      background: #FBEBD9
+      background: url("../../img/blockquote.png") repeat
       top: 0px
       bottom: 0
       z-index: -1
@@ -1327,12 +1344,254 @@ footer
   justify-content: center
   margin-bottom: 26px
   a
-    color: #A08255
+    color: #BB4604
     font-weight: 800
     font-size: 14px
     line-height: 23px
     letter-spacing: 0.006px
     position: relative
     text-decoration: none
+    margin-right: 5px
     &:after
-      content: ' /'
+      content: ' / '
+.static
+  padding: 32px 0 85px
+  background: url("../../img/pages_bg.png") repeat
+  &-body
+    padding: 42px 0 0px
+    h2,h3,h4,h5,h6
+      text-align: center
+
+  &__title
+    font-family: 'Shnobel', serif
+    font-size: 55px
+    line-height: 55px
+    text-align: center
+    margin: 0 0 22px
+    color: #8E491C
+    font-weight: 400
+  &-slider
+    &-item
+      height: 412px
+      width: 100%
+      background-size: cover
+      position: relative
+      &__caption
+        background: rgba(0, 0, 0, 0.6)
+        position: absolute
+        bottom: 0
+        right: 0
+        left: 0
+        padding: 14px 5% 12px
+        font-size: 22px
+        line-height: 32px
+        text-align: center
+        color: #fff
+        font-family: 'Shnobel', serif
+      &:before
+        content: ''
+        position: absolute
+        left: -200%
+        right: -200%
+        top: 0
+        height: 100%
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) -1.87%, rgba(0, 0, 0, 0) 5.57%)
+      &:after
+        content: ''
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) -0.43%, rgba(0, 0, 0, 0) 4.6%)
+        position: absolute
+        left: -200%
+        right: -200%
+        bottom: 0
+        height: 100%
+    .owl-nav
+      button
+        background: url("../svg/static_arrow.svg") no-repeat
+        width: 21px
+        height: 18px
+.zoom-image
+  position: relative
+  display: block
+  img
+    max-width: 100%
+  &:after
+    content: ''
+    position: absolute
+    bottom: 5px
+    right: 5px
+    width: 32px
+    height: 32px
+    background: url("../svg/zoom_icon.svg") no-repeat
+    opacity: 0.85
+    transition: .2s
+.docs
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  &-item
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    margin-bottom: 10px
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.006em
+    color: #BB4604
+    &:last-child
+      margin-bottom: 0
+    &:before
+      content: ''
+      width: 20px
+      height: 24px
+      position: relative
+      display: inline-block
+      margin-right: 6px
+      background: url("../svg/doc.svg") no-repeat
+      bottom: 5px
+.background
+  background: url("../../img/pages_bg.png") repeat
+.news
+  &__title
+    color: #8E491C
+    margin: 0 auto 66px
+    text-align: center
+    max-width: 920px
+  &-main
+    display: flex
+    align-items: center
+    border-bottom: 1px solid #D2AA83
+    padding-bottom: 30px
+    margin-bottom: 30px
+    &__image
+      flex: 0 0 445px
+      margin-right: 30px
+      img
+        max-width: 100%
+    &__title
+      font-size: 36px
+      line-height: 36px
+      color: #bb4604
+      margin-bottom: 14px
+      font-family: 'Shnobel', serif
+      text-decoration: none
+      display: block
+    &__date
+      font-size: 15px
+      line-height: 20px
+      letter-spacing: 0.006em
+      margin-bottom: 14px
+    &__desc
+      font-size: 20px
+      line-height: 26px
+      letter-spacing: 0.006em
+  &-list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px -15px
+    overflow: hidden
+    &-wrapper
+      padding: 32px 0 100px
+    &-hr
+      margin: 0 -64px
+  &-item
+    flex: 0 1 25%
+    max-width: 25%
+    position: relative
+    margin: 0 0px 50px
+    padding: 12px 15px
+    //padding: 12px 0
+    &:nth-child(4n+4)
+      &:after
+        content: none
+      &:before
+        right: 15px
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0px
+      background: #D2AA83
+      width: 1px
+    &:before
+      content: ''
+      position: absolute
+      bottom: -12px
+      left: 15px
+      right: -15px
+      height: 1px
+      background: #D2AA83
+    &.last
+      &:before
+        content: none
+    &__date
+      font-size: 14px
+      line-height: 18px
+      letter-spacing: 0.006em
+      margin-bottom: 10px
+    &-link
+      text-decoration: none
+    &__image
+      height: 190px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 18px
+      img
+        max-width: 100%
+    &__title
+      font-size: 26px
+      line-height: 32px
+      font-family: 'Shnobel', serif
+      color: #bb4604
+      margin-bottom: 8px
+      display: block
+    &__desc
+      font-size: 16px
+      line-height: 21px
+      letter-spacing: 0.006em
+      position: relative
+      &:after
+        content: ''
+        position: relative
+        top: 4px
+        width: 17px
+        height: 17px
+        display: inline-flex
+        background: url("../svg/full_text.svg") no-repeat
+.pagination
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 60px
+  margin: 42px 0 0
+  a
+    color: #BB4604
+    text-decoration: none
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.006em
+    position: relative
+    display: inline-flex
+  &__prev
+    &:before
+      content: ''
+      position: relative
+      width: 22px
+      height: 19px
+      background: url("../svg/pagination.svg") no-repeat
+      margin-right: 12px
+      top: 1px
+  &__next
+    &:after
+      content: ''
+      position: relative
+      width: 22px
+      height: 19px
+      background: url("../svg/pagination.svg") no-repeat
+      margin-left: 12px
+      top: 1px
+      transform: scale(-1,1)
