@@ -116,6 +116,8 @@ hr
   border: none
   height: 28px
 .content
+  h1,h2,h3,h4,h5,h6
+    text-align: center
   a
     color: #BB4604
     text-decoration: none
@@ -355,114 +357,6 @@ hr
         padding: 14px 25px
         letter-spacing: 0.06em
         text-transform: uppercase
-
-.form
-  background: #FF981F
-  position: relative
-  z-index: 1
-  padding-top: 85px
-  padding-bottom: 54px
-
-  a
-    color: #D6001F
-
-    strong
-
-  input.error, textarea.error, select.error, .checkbox-custom.error
-  //box-shadow: inset 0 0 20px -3px rgba(255, 194, 135, 0.57)
-  &-row
-    display: flex
-    align-items: center
-    margin-bottom: 32px
-
-    &:last-of-type
-      margin-bottom: 0
-
-    &--only-checkbox
-      padding-top: 6px
-      padding-bottom: 12px
-
-    &__label
-      color: #231d1f
-
-    &__info
-      width: 100%
-      font-size: 14px
-      line-height: 21px
-      font-weight: 300
-      //font-style: italic
-      color: #888888
-      margin: 15px 0 0
-
-  &__caption
-    font-size: 16px
-    line-height: 24px
-    color: #231d1f
-    width: 300px
-    flex-shrink: 0
-    margin-right: 30px
-
-  &__area
-    width: 100%
-    position: relative
-    flex-shrink: 0
-
-    &--half-width
-      width: 30%
-
-    &--small
-      width: 49%
-
-    &--big
-      width: 50%
-
-    &--tiny
-      width: 16%
-
-  select
-    height: 42px
-
-.error .form__title
-  color: #c31c00
-
-.has-error ~ .form__title
-  color: #fe8212
-
-.form-error
-  //background: #ffecd9
-  //border: 1px solid #c72b11
-  color: #fff
-  position: relative
-  line-height: 21px
-  border-radius: 4px
-  padding: 56px 65px 51px 105px
-  margin-bottom: 30px
-  font-size: 18px
-  line-height: 27px
-  font-weight: 500
-  z-index: 1
-
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    bottom: 0
-    left: -200%
-    right: -200%
-    background: #2F348B
-    z-index: -1
-
-  &:after
-    content: ''
-    position: absolute
-    left: 0
-    top: 0
-    bottom: 0
-    margin: auto
-    background: url("../svg/form-error.svg") no-repeat
-    width: 70px
-    height: 70px
-
   ul
     margin: 6px 0
     margin-bottom: 0
@@ -719,12 +613,14 @@ label
 
 .checkbox
   cursor: pointer
-  color: #808080
   line-height: 24px
+  max-width: 540px
+  margin: 0 auto
   font-size: 20px
   //margin: 9px 0
   display: flex
-  align-items: flex-start
+  flex-direction: column
+  align-items: center
 
   &.has-error
     .checkbox-custom
@@ -733,12 +629,13 @@ label
   &__label
     display: inline-block
     vertical-align: bottom
-    font-size: 18px
-    line-height: 24px
+    font-size: 20px
+    line-height: 26px
     color: #000
+    text-align: center
 
     a
-      color: #fff
+      color: #BB4604
       text-decoration: none
 
   input[type=checkbox]
@@ -749,15 +646,13 @@ label
 
   .checkbox__custom
     position: relative
-    width: 30px
-    height: 30px
-    margin-right: 13px
-    background: #ffffff
-    display: inline-flex
-    border-radius: 5px
+    width: 26px
+    height: 26px
+    background: linear-gradient(0deg, #A08255, #A08255), #FFFFFF
+    box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.08)
+    border-radius: 4px
     flex-shrink: 0
-    transition: .3s
-    top: 6px
+    margin-bottom: 10px
 
     &:hover
       transition: .3s
@@ -779,7 +674,6 @@ label
   height: 14px
 
 .checkbox:checked + .checkbox__custom
-  border: 1px solid #c76203
 //box-shadow: 0 0 5px #c35e00
 
 .radio-wrapper
@@ -1056,6 +950,7 @@ label
   position: relative
   background: #F5EBDF
   border-bottom: 4px solid #A08255
+  z-index: 1
   &:before
     content: ''
     top: 0
@@ -1064,6 +959,7 @@ label
     width: 608px
     position: absolute
     background: url("../../img/header_left.png") no-repeat
+    z-index: -1
   &:after
     content: ''
     top: 0
@@ -1073,18 +969,19 @@ label
     position: absolute
     background: url("../../img/header_right.png") no-repeat
     background-position: center right
+    z-index: -1
 .col-xl-10
   margin: 0 auto
 .history
   &-body
     padding: 18px 0 75px
-    background: #E3D2BD
+    background: url("../../img/pages_bg.png")
     .breadcrumbs
       margin-bottom: 45px
     &__title
       font-family: 'Shnobel', serif
       font-weight: 400
-      color: #000
+      color: #8E491C
       margin: 0 auto 30px
       text-align: center
       font-size: 55px
@@ -1102,13 +999,14 @@ label
           margin-bottom: 0
     &-author
       display: flex
+      align-items: center
       margin-left: auto
       justify-content: flex-end
       &-text
         margin-right: 40px
         text-align: right
         flex: 0 1 350px
-        color: #8E491C
+        color: #000
       &__name
         letter-spacing: 0.02em
         text-transform: uppercase
@@ -1130,19 +1028,21 @@ label
         img
           max-width: 100%
   &-gallery
-    background: url("../../img/history_gallery_bg.png") repeat
+    //background: url("../../img/history_gallery_bg.png") repeat
+    background: #2A5347
     padding: 80px 0 40px
     &-list
       display: flex
       flex-wrap: wrap
       justify-content: center
-      margin: 0 -14px
+      margin: 0 -15px
     &-item
       max-width: 390px
       display: inline-flex
       flex-direction: column
       justify-content: flex-start
-      margin: 0 14px
+      //margin: 0 14px
+      padding: 0 15px
       margin-bottom: 20px
       &__image
         height: 316px
@@ -1171,7 +1071,7 @@ label
         font-size: 15px
         line-height: 20px
         letter-spacing: 0.006em
-        color: #D7B283
+        color: #fff
 .owl-stage
   display: flex
 .full-slider
@@ -1186,15 +1086,43 @@ label
   .owl-nav
     button
       border: none
-      background: url("../svg/full_arrow.svg") no-repeat
       position: absolute
+      background: none
       top: 0
       bottom: 0
       margin: auto
       font-size: 0
       width: 40px
-      height: 35px
+      height: 40px
       cursor: pointer
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      &:focus
+        outline: none
+      &:after
+        content: ''
+        position: absolute
+        margin: auto
+        width: 21px
+        height: 18px
+        background: url("../svg/static_arrow.svg") no-repeat
+        z-index: 100
+      &:before
+        content: ''
+        opacity: 0
+        transition: .2s
+        background: url("../svg/slider_hover.svg") no-repeat
+      &:hover:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0px
+        opacity: 1
+        background: url("../svg/slider_hover.svg") no-repeat
+        width: 39px
+        height: 39px
+        z-index: 95
     .owl-prev
       left: 50px
     .owl-next
@@ -1253,10 +1181,10 @@ footer
         width: 51px
         height: 51px
   &__copyright
-    font-size: 12px
+    font-size: 13px
     line-height: 17px
     color: #bfaa8f
-    flex: 0 1 254px
+    flex: 0 1 285px
     margin-right: 30px
     padding-top: 18px
   &-interso
@@ -1264,13 +1192,14 @@ footer
     font-size: 14px
     line-height: 20px
     color: #bfaa8f
+    text-align: right
     a
       color: #bfaa8f
       text-decoration: none
 .team
   &-page
     padding: 22px 0 590px
-    background: #8F8163
+    background: url("../../img/pages_bg.png")
     position: relative
     &:before
       content: ''
@@ -1297,21 +1226,21 @@ footer
     font-size: 55px
     line-height: 55px
     text-align: center
-    color: #fff
+    color: #8E491C
     font-weight: 400
     font-family: 'Shnobel', serif
   &-desc
     font-size: 20px
     line-height: 26px
     letter-spacing: 0.006em
-    color: #fff
+    color: #000
     margin-bottom: 40px
     p
       font-size: 20px
       line-height: 26px
       letter-spacing: 0.006em
       margin-bottom: 26px
-      color: #fff
+      color: #000
       &:last-child
         margin-bottom: 0
   &-list
@@ -1320,22 +1249,29 @@ footer
     margin: 0 -35px
     &-item
       flex: 0 1 278px
-      margin: 0 26px
+      margin: 0 26px 30px
       &__image
         width: 278px
         height: 302px
-        margin-bottom: 12px
+        margin-bottom: 13px
         overflow: hidden
         display: inline-flex
         align-items: center
         justify-content: center
         img
-
+      &__position
+        font-family: 'Shnobel', serif
+        font-size: 22px
+        line-height: 38px
+        margin-bottom: 12px
+        text-align: center
+        color: #8E491C
       &__desc
+        font-weight: 700
         font-size: 15px
         line-height: 20px
         text-align: center
-        color: #FFE9CA
+        color: #000
 .team-page .breadcrumbs a
   color: #E3D2BD
   position: relative
@@ -1406,9 +1342,10 @@ footer
         height: 100%
     .owl-nav
       button
-        background: url("../svg/static_arrow.svg") no-repeat
+        background: url("../svg/static_arrow.svg") no-repeat center
         width: 21px
         height: 18px
+        z-index: 100
 .zoom-image
   position: relative
   display: block
@@ -1595,3 +1532,139 @@ footer
       margin-left: 12px
       top: 1px
       transform: scale(-1,1)
+.news-detail
+  padding-bottom: 26px
+  &-wrapper
+    padding-top: 36px
+  &__date
+    font-size: 15px
+    line-height: 20px
+    letter-spacing: 0.006em
+    margin-bottom: 25px
+  &__image
+    //height: 300px
+    display: flex
+    overflow: hidden
+    align-items: flex-start
+    justify-content: center
+    margin-bottom: 35px
+    img
+      max-width: 100%
+  &-body
+.news-footer
+  .pagination
+    margin-bottom: 30px
+    padding: 0
+.news-more
+  display: flex
+  justify-content: space-between
+  position: relative
+  padding-bottom: 60px
+  margin: 0 -15px
+  &__separator
+    width: 1px
+    background: #D2AA83
+  .news-item
+    flex: 0 1 445px
+    max-width: 445px
+    margin-bottom: 0
+    &:last-child
+      text-align: right
+      .news-item__image
+        justify-content: flex-end
+    &__image
+      justify-content: flex-start
+    &:before
+      content: none
+    &:after
+      content: none
+.map
+  height: 452px
+  width: 100%
+.contacts
+  &-wrapper
+    padding: 32px 0 100px
+  &-row
+    display: flex
+    padding: 46px 0 35px
+    margin: -15px
+    justify-content: center
+  &-item
+    padding: 0 15px
+    flex: 0 1 350px
+    font-size: 20px
+    line-height: 26px
+    text-align: center
+    color: #000
+    span
+      display: block
+      a
+        text-decoration: none
+        color: #000
+      &.link
+        a
+          color: #BB4604
+.col-xl-8
+  margin: 0 auto
+.form
+  &__title
+    margin-bottom: 32px
+    text-align: center
+  &-item
+    margin-bottom: 42px
+    &.submit
+      text-align: center
+    &.checkbox
+      margin: -5px auto 28px
+    &.required
+      .form-item__caption
+        position: relative
+        &:after
+          content: ' *'
+          color: #BB4604
+          font-size: 20px
+          line-height: 26px
+    &__caption
+      font-size: 20px
+      line-height: 26px
+      text-align: center
+      letter-spacing: 0.006em
+      margin-bottom: 8px
+.input
+  &-text
+    background: linear-gradient(0deg, #A08255, #A08255), #FFFFFF
+    box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.08)
+    border-radius: 4px
+    font-size: 20px
+    line-height: 26px
+    text-align: center
+    letter-spacing: 0.006em
+    font-weight: 700
+    width: 100%
+    color: #fff
+    &::placeholder
+      color: #E3D2BD
+  &-textarea
+    background: linear-gradient(0deg, #A08255, #A08255), #FFFFFF
+    box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.08)
+    border-radius: 4px
+    font-size: 20px
+    line-height: 26px
+    text-align: left
+    letter-spacing: 0.006em
+    color: #fff
+    width: 100%
+    padding: 13px
+    font-weight: 400
+.submit-button
+  background: #BB4604
+  border-radius: 10px
+  padding: 21px 34px 15px 34px
+  font-family: 'Shnobel', serif
+  font-size: 26px
+  line-height: 20px
+  text-align: center
+  border: none
+  margin: 0 auto
+  color: #fff
+  cursor: pointer
