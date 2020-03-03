@@ -2,6 +2,7 @@
 $(document).ready(function() {
   svg4everybody();
   fullSlider();
+  mainPopup();
 
   function fullSlider() {
     $(".full-slider").owlCarousel({
@@ -29,6 +30,19 @@ $(document).ready(function() {
         $(burger).removeClass("active");
       }
     });
+  }
+  function mainPopup() {
+    $("[data-popup]")
+      .on("mouseover", function(e) {
+        $(".popup-item").removeClass("active");
+        let name = $(this).data("popup");
+        let className = `.popup-item.${name}`;
+        $(`.popup-item.${name}`).addClass("active");
+        console.log(className);
+      })
+      .on("mouseleave", function(e) {
+        $(".popup-item").removeClass("active");
+      });
   }
 
   if ($(window).width() < 1120) {

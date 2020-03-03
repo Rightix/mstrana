@@ -2,15 +2,25 @@
 $(document).ready(function() {
   svg4everybody(),
     $(".full-slider").owlCarousel({ items: 1, nav: !0, mouseDrag: !1 }),
+    $("[data-popup]")
+      .on("mouseover", function(e) {
+        $(".popup-item").removeClass("active");
+        var o = $(this).data("popup"),
+          t = ".popup-item.".concat(o);
+        $(".popup-item.".concat(o)).addClass("active"), console.log(t);
+      })
+      .on("mouseleave", function(e) {
+        $(".popup-item").removeClass("active");
+      }),
     $(".burger-button").on("click", function(e) {
       $(".header-menu").toggleClass("active"), $(this).toggleClass("active");
     }),
     $("body").on("click", function(e) {
-      var t = document.getElementsByClassName("header-menu")[0],
-        o = document.getElementsByClassName("burger-button")[0];
-      e.target !== t &&
-        e.target !== o &&
-        ($(t).removeClass("active"), $(o).removeClass("active"));
+      var o = document.getElementsByClassName("header-menu")[0],
+        t = document.getElementsByClassName("burger-button")[0];
+      e.target !== o &&
+        e.target !== t &&
+        ($(o).removeClass("active"), $(t).removeClass("active"));
     }),
     $(window).width() < 1120 &&
       ($(".tour-examples-card.more").remove(),
