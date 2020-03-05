@@ -37,11 +37,18 @@
                 <div class="col-xl-8">
                     <form action="" class="form">
                         <h2 class="form__title">оСтАВИТЬ ПоЖЕЛАНиЕ Или зАДАть ВоПРоС</h2>
+                        <div class="form-status">
+                            <div class="form-status__title">Ошибка!</div>
+                            <div class="form-status__desc">Проверьте правильность заполнения поля «Контактный телефон».
+                                Возможно вы использовали неправильные символы — в нем могут быть только цифры от 0 до 9
+                                и знаки пробела, «(», «)» и «+»
+                            </div>
+                        </div>
                         <div class="form-item required">
                             <div class="form-item__caption">Как вас зовут</div>
                             <input class="input-text" type="text">
                         </div>
-                        <div class="form-item">
+                        <div class="form-item error">
                             <div class="form-item__caption">Контактный телефон</div>
                             <input placeholder="для связи с нами" class="input-text" type="text">
                         </div>
@@ -90,12 +97,12 @@
                 hintContent: 'Контент метки',
                 balloonContent: 'г. Петрозаводск, пр. Лесной, 55'
             }, {
-                balloonOffset: [0, -40],
+                balloonOffset: [0, -89],
                 hideIconOnBalloonOpen: false,
                 iconLayout: 'default#image',
-                // iconImageHref: 'plain/svg/placemark.svg',
-                // iconImageSize: [45, 54],
-                // iconImageOffset: [-22, -54],
+                iconImageHref: 'plain/svg/placemark.svg',
+                iconImageSize: [67, 89],
+                iconImageOffset: [-33, -89],
             });
 
             myMap.controls.add('zoomControl');

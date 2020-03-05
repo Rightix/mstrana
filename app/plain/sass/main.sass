@@ -35,6 +35,7 @@ html
   display: flex
   flex-direction: column
   height: 100%
+  min-height: 100vh
 
 h1, h2, h3, h4, h5, h6
   font-family: "Shnobel", serif
@@ -363,7 +364,7 @@ hr
     padding-left: 0px
 
   ul li
-    color: #fff
+    color: #000
     margin-bottom: 3px
     list-style: none
 
@@ -799,6 +800,8 @@ label
     top: 65px
     left: 130px
     position: absolute
+    img
+      max-width: 100%
   &__princess
     position: absolute
     left: 0
@@ -807,6 +810,8 @@ label
     z-index: 35
     bottom: 12px
     width: 133px
+    img
+      max-width: 100%
   &__prince
     position: absolute
     left: 460px
@@ -815,14 +820,35 @@ label
     right: 0
     margin: 0 auto
     z-index: 35
+    img
+      max-width: 100%
+  &-copyright
+    max-width: 570px
+    position: absolute
+    left: 32px
+    bottom: 20px
+    font-size: 14px
+    line-height: 17px
+    color: #A9AE89
+    z-index: 40
+  &-interso
+    color: #A9AE89
+    font-size: 14px
+    line-height: 17px
+    right: 32px
+    bottom: 20px
+    position: absolute
+    z-index: 40
 .main
   &-page
     background: url("../../img/bricks.png") repeat
     position: relative
+    min-height: 100vh
     &:after
       content: ''
       position: absolute
-      bottom: 18px
+      top: 178px
+      //bottom: 18px
       left: -200%
       right: -200%
       height: 804px
@@ -899,6 +925,7 @@ label
   &-menu
     display: flex
     justify-content: center
+    align-items: flex-start
     &__item
       font-family: 'Shnobel', serif
       font-size: 22px
@@ -907,6 +934,9 @@ label
       text-decoration: none
       margin-right: 34px
       padding-top: 8px
+      transition: .2s color
+      &:hover
+        color: #000
       &:last-child
         margin-right: 0
       & + .main-menu__logo
@@ -1101,19 +1131,22 @@ label
     top: 0
     bottom: 0
     left: 0
-    width: 608px
+    //width: 608px
+    right: 64%
     position: absolute
     background: url("../../img/header_left.png") no-repeat
+    background-position: right
     z-index: -1
   &:after
     content: ''
     top: 0
     bottom: 0
     right: 0
-    width: 572px
+    left: 66%
+    //width: 572px
     position: absolute
     background: url("../../img/header_right.png") no-repeat
-    background-position: center right
+    background-position: center left
     z-index: -1
 .col-xl-10
   margin: 0 auto
@@ -1174,7 +1207,7 @@ label
           max-width: 100%
   &-gallery
     //background: url("../../img/history_gallery_bg.png") repeat
-    background: #555B30
+    background: #C6A772
     padding: 80px 0 40px
     &-list
       display: flex
@@ -1216,7 +1249,7 @@ label
         font-size: 15px
         line-height: 20px
         letter-spacing: 0.006em
-        color: #fff
+        color: #513725
 .owl-stage
   display: flex
 .full-slider
@@ -1278,6 +1311,7 @@ footer
 .footer
   padding: 58px 20px 52px
   display: flex
+  justify-content: space-between
   &__logo
     margin-right: 55px
     svg
@@ -1325,6 +1359,7 @@ footer
       svg
         width: 51px
         height: 51px
+        fill: #D7B283
   &__copyright
     font-size: 13px
     line-height: 17px
@@ -1392,6 +1427,7 @@ footer
     display: flex
     flex-wrap: wrap
     margin: 0 -35px
+    justify-content: center
     &-item
       flex: 0 1 278px
       margin: 0 26px 30px
@@ -1418,7 +1454,6 @@ footer
         text-align: center
         color: #000
 .team-page .breadcrumbs a
-  color: #E3D2BD
   position: relative
 .breadcrumbs
   display: flex
@@ -1485,12 +1520,6 @@ footer
         right: -200%
         bottom: 0
         height: 100%
-    .owl-nav
-      button
-        background: url("../svg/static_arrow.svg") no-repeat center
-        width: 21px
-        height: 18px
-        z-index: 100
 .zoom-image
   position: relative
   display: block
@@ -1620,7 +1649,7 @@ footer
       height: 190px
       display: flex
       align-items: center
-      justify-content: center
+      justify-content: flex-start
       margin-bottom: 18px
       img
         max-width: 100%
@@ -1757,6 +1786,11 @@ footer
     text-align: center
   &-item
     margin-bottom: 42px
+    &.error
+      .input-text,.input-textarea
+        background: linear-gradient(0deg, #BB4604, #BB4604), linear-gradient(0deg, #A08255, #A08255), #FFFFFF
+        box-shadow: inset 0px 4px 0px rgba(0, 0, 0, 0.08)
+        color: #FFBC96
     &.submit
       text-align: center
     &.checkbox
@@ -1890,3 +1924,106 @@ footer
     &__desc
       font-size: 16px
       line-height: 22px
+.form-status
+  background: #FFD6BF
+  padding: 32px 44px 36px
+  text-align: center
+  margin: 0 -95px 27px
+  &__title
+    font-size: 22px
+    line-height: 26px
+    font-weight: 700
+    color: #bb4604
+    margin-bottom: 3px
+    letter-spacing: 0.006em
+  &__desc
+    font-size: 18px
+    line-height: 26px
+    letter-spacing: 0.006em
+    color: #BB4604
+.error-page
+  background: #F8EACF
+  footer
+    margin-top: auto
+    background: none
+    color: #A38068
+  .footer
+    justify-content: space-between
+    &-contacts
+      &__item
+        color: #A38068
+        &.phone
+          a
+            color: #A38068
+          svg
+            fill: #A38068
+        &.mail
+          a
+            color: #BB4604
+          svg
+            fill: #BB4604
+    &-social__vk svg
+      fill: #BB4604
+    &__copyright
+      color: #A38068
+    &-interso
+      color: #A38068
+      a
+        color: #A38068
+  .main-menu
+    align-items: center
+    justify-content: flex-start
+    padding-top: 58px
+    &__item
+      order: 2
+      color: #8E491C
+    &__logo
+      order: 1
+      width: 102px
+      height: 87px
+      margin-right: 36px
+      img
+        max-width: 100%
+.error-body
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  margin: auto
+  padding: 0 15px
+  &__title
+    font-size: 55px
+    margin: 0 0 33px
+    color: #8E491C
+  &__desc
+    font-size: 20px
+    line-height: 26px
+    letter-spacing: 0.006em
+    max-width: 730px
+    margin: 0 auto
+    a
+      color: #BB4604
+      text-decoration: none
+.col-lg-10
+  margin: 0 auto
+.error-page .main-menu__logo
+  margin-left: 0
+@media (max-width: 820px)
+  .main-house.gallery
+    z-index: 12
+.main-page-footer.tablet
+  display: none
+.start-copyright.small
+  display: none
+.menu__trigger,.mobile-header
+  display: none
+.main-menu.mobile
+  display: none
+  z-index: 120
+.main-header .menu__trigger
+  z-index: 150
+.main-menu.mobile
+  &.active
+    opacity: 1
+    z-index: 120
+    transition: .4s

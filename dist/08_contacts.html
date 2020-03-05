@@ -29,6 +29,29 @@
 <body>
 <div class="wrapper">
     <header class="main-header inner-header">
+    <div class="mobile-header">
+        <div class="menu__trigger"></div>
+        <a href="" class="main-menu__logo">
+            <img src="plain/svg/logo.svg" alt="">
+        </a>
+        <div class="main-header-contacts">
+            <div class="main-header-contacts__address">г. Петрозаводск,<br> ул. Анохина, 1</div>
+            <div class="main-header-contacts-right">
+                <a href="tel:+7 (8142) 78-02-01" class="main-header-contacts__phone">
+                        <span class="phone_ico">
+                            <svg><use xlink:href="plain/svg/sprite.svg#ico_phone"></use></svg>
+                        </span>
+                    +7 (8142) 78-02-01
+                </a>
+                <a href="mailto:kukla-m@karelia.ru" class="main-header-contacts__mail">
+                        <span class="mail_ico">
+                            <svg><use xlink:href="plain/svg/sprite.svg#ico_mail"></use></svg>
+                        </span>
+                    kukla-m@karelia.ru
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="main-menu">
         <a href="" class="main-menu__item">РАзДелы</a>
         <a href="" class="main-menu__item">НАшА комАнДА</a>
@@ -90,11 +113,18 @@
                 <div class="col-xl-8">
                     <form action="" class="form">
                         <h2 class="form__title">оСтАВИТЬ ПоЖЕЛАНиЕ Или зАДАть ВоПРоС</h2>
+                        <div class="form-status">
+                            <div class="form-status__title">Ошибка!</div>
+                            <div class="form-status__desc">Проверьте правильность заполнения поля «Контактный телефон».
+                                Возможно вы использовали неправильные символы — в нем могут быть только цифры от 0 до 9
+                                и знаки пробела, «(», «)» и «+»
+                            </div>
+                        </div>
                         <div class="form-item required">
                             <div class="form-item__caption">Как вас зовут</div>
                             <input class="input-text" type="text">
                         </div>
-                        <div class="form-item">
+                        <div class="form-item error">
                             <div class="form-item__caption">Контактный телефон</div>
                             <input placeholder="для связи с нами" class="input-text" type="text">
                         </div>
@@ -189,12 +219,12 @@
                 hintContent: 'Контент метки',
                 balloonContent: 'г. Петрозаводск, пр. Лесной, 55'
             }, {
-                balloonOffset: [0, -40],
+                balloonOffset: [0, -89],
                 hideIconOnBalloonOpen: false,
                 iconLayout: 'default#image',
-                // iconImageHref: 'plain/svg/placemark.svg',
-                // iconImageSize: [45, 54],
-                // iconImageOffset: [-22, -54],
+                iconImageHref: 'plain/svg/placemark.svg',
+                iconImageSize: [67, 89],
+                iconImageOffset: [-33, -89],
             });
 
             myMap.controls.add('zoomControl');

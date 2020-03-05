@@ -1,0 +1,314 @@
+@media (max-width: 720px) {
+  .start__castle {
+    width: 705px;
+    height: 590px;
+    bottom: 240px;
+    background-position: 55% 50%; }
+  .start__princess {
+    width: 107px;
+    height: 165px;
+    bottom: 101px;
+    left: 20px;
+    right: auto; }
+  .start__prince {
+    width: 114px;
+    height: 153px;
+    right: 20px;
+    left: auto;
+    bottom: 146px; }
+  .start__road {
+    width: 220px;
+    height: 319px;
+    background: url("../../img/start_road_mobile.png") no-repeat;
+    background-size: contain;
+    right: -46px; }
+  .start__castles {
+    width: 610px;
+    height: 300px;
+    bottom: 436px;
+    width: 100%;
+    background-size: cover;
+    background-position: center; }
+  .start-logotype {
+    width: 149px;
+    height: 127px;
+    top: 43px;
+    right: 0;
+    left: 0;
+    margin: 0 auto; }
+  .start-wrapper {
+    height: 1024px;
+    max-height: none;
+    position: relative; }
+    .start-wrapper .menu__trigger {
+      width: 25px;
+      height: 23px;
+      background: url("../svg/burger.svg") no-repeat;
+      top: 32px;
+      left: 32px;
+      position: absolute;
+      display: block;
+      z-index: 100;
+      cursor: pointer; }
+      .start-wrapper .menu__trigger:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: -15px;
+        right: -15px;
+        bottom: -15px; }
+  .start-page {
+    height: 1024px;
+    position: relative; }
+  .start-ground:after {
+    bottom: -174px; }
+  .start__sun {
+    display: none; }
+  .start-copyright, .start-interso {
+    display: none; }
+  .start-copyright.small {
+    display: none; }
+  .main-header {
+    height: 177px;
+    padding: 32px 25px 0 29px; }
+    .main-header .menu__trigger {
+      width: 25px;
+      height: 23px;
+      background: url("../svg/burger.svg") no-repeat;
+      position: relative;
+      display: block;
+      cursor: pointer; }
+      .main-header .menu__trigger.active {
+        background: url("../svg/burger_active.svg") no-repeat; }
+      .main-header .menu__trigger:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: -15px;
+        right: -15px;
+        bottom: -15px; }
+  .main-header-contacts, .main-menu {
+    display: none; }
+  .main-header {
+    margin-bottom: 20px; }
+  .mobile-header {
+    display: block;
+    position: relative;
+    padding-right: 172px; }
+    .mobile-header .main-header-contacts {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .mobile-header .main-menu__logo {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-right: 0;
+      width: 136px;
+      height: 116px; }
+    .mobile-header .main-header-contacts {
+      position: relative;
+      display: block;
+      text-align: left;
+      margin-top: 34px;
+      width: 150px; }
+      .mobile-header .main-header-contacts__address {
+        text-align: left;
+        margin-bottom: 10px; }
+      .mobile-header .main-header-contacts__phone {
+        margin-bottom: 10px; }
+  .main-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    top: -32px;
+    left: -29px;
+    right: -25px;
+    background: #8E491C;
+    z-index: 120;
+    padding-top: 80px;
+    padding-bottom: 5px;
+    opacity: 0;
+    -webkit-transition: .4s opacity;
+    transition: .4s opacity; }
+    .main-menu.mobile {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      z-index: -1; }
+      .main-menu.mobile .main-menu__logo {
+        display: none; }
+    .main-menu__item {
+      font-size: 26px;
+      line-height: 20px;
+      color: #fff;
+      padding: 20px 30px;
+      border-top: 1px solid #723712;
+      width: 100%; }
+  .mobile-menu__close {
+    position: absolute;
+    top: 30px;
+    right: 32px;
+    background: url("../svg/close.svg") no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    cursor: pointer; }
+    .mobile-menu__close:after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      bottom: -7px;
+      right: -7px;
+      left: -7px; }
+  .main-page {
+    height: auto;
+    min-height: 0; }
+  .main-page-footer.tablet {
+    display: none; }
+  .main-houses {
+    display: none; }
+  .mobile-houses {
+    padding: 0 15px; }
+  .mobile-house {
+    position: relative; }
+    .mobile-house:before {
+      content: '';
+      position: absolute;
+      height: 200px;
+      width: 276px;
+      background: url("../../img/street_mobile_1.png") no-repeat;
+      background-position: center right; }
+    .mobile-house:after {
+      content: '';
+      position: absolute;
+      height: 200px;
+      width: 276px;
+      background: url("../../img/street_mobile_1.png") no-repeat;
+      background-position: center left; }
+    .mobile-house img {
+      max-width: 100%; }
+    .mobile-house__image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0 auto 14px;
+      z-index: 5;
+      position: relative; }
+    .mobile-house .popup-item {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      padding: 32px 20px 30px;
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+      z-index: 6; }
+      .mobile-house .popup-item:before {
+        content: '';
+        background: url("../svg/mobile_popup.svg") no-repeat;
+        width: 24px;
+        height: 35px;
+        position: absolute;
+        top: -34px; }
+    .mobile-house.school:before {
+      top: 17px;
+      right: 70%; }
+    .mobile-house.school:after {
+      top: 0;
+      left: 61%; }
+    .mobile-house.school .mobile-house__image {
+      width: 348px;
+      height: 239px; }
+    .mobile-house.school .popup-item:before {
+      left: 106px;
+      right: 200px;
+      margin: 0 auto; }
+    .mobile-house.gallery {
+      margin-top: -20px;
+      z-index: 10; }
+      .mobile-house.gallery:before {
+        height: 247px;
+        top: 63px;
+        right: 47%; }
+      .mobile-house.gallery:after {
+        top: 63px;
+        left: 83%;
+        height: 247px; }
+      .mobile-house.gallery .mobile-house__image {
+        width: 267px;
+        height: 322px;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        margin-left: auto;
+        margin-right: 0; }
+      .mobile-house.gallery .popup-item:before {
+        left: auto;
+        right: 60px;
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1); }
+    .mobile-house.shop {
+      margin-top: -20px;
+      z-index: 10; }
+      .mobile-house.shop:before {
+        height: 247px;
+        top: 63px;
+        right: 67%; }
+      .mobile-house.shop:after {
+        top: 63px;
+        height: 247px;
+        left: 45%; }
+      .mobile-house.shop .mobile-house__image {
+        width: 268px;
+        height: 322px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: auto; }
+      .mobile-house.shop .popup-item:before {
+        right: auto;
+        left: 100px; }
+    .mobile-house.showroom {
+      z-index: 10; }
+      .mobile-house.showroom:before {
+        height: 247px;
+        top: 63px;
+        right: 67%; }
+      .mobile-house.showroom:after {
+        top: 63px;
+        height: 247px;
+        left: 45%; }
+      .mobile-house.showroom .mobile-house__image {
+        width: 273px;
+        height: 286px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 0; }
+      .mobile-house.showroom .popup-item:before {
+        right: 100px;
+        left: auto;
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1); }
+  .gallery_woman {
+    width: 50px;
+    height: 105px;
+    background: url("../../img/woman.png") no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 210px;
+    z-index: 12;
+    position: absolute; } }

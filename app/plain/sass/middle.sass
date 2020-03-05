@@ -1,72 +1,287 @@
-@media (min-width: 992px) and (max-width: 1340px)
-  .header
+@media (max-width: 1024px)
+  .start
+    &__ground
+      height: 200px
+    &__castle
+      width: 646px
+      height: 549px
+      bottom: 80px
+    &__road
+      width: 185px
+      color: #000
+      height: 176px
+      right: -57px
+    &__princess
+      width: 95px
+      bottom: 50px
+      right: 150px
+      height: 146px
+    &__prince
+      width: 102px
+      height: 136px
+      bottom: 40px
+      left: 323px
+    &__green
+      height: 258px
+    &-copyright
+      max-width: 315px
+      font-size: 11px
+      line-height: 15px
+      bottom: 17px
+      left: 23px
+    &-interso
+      right: 23px
+      bottom: 17px
+      font-size: 11px
+      line-height: 15px
+    &__sun
+      width: 174px
+      height: 174px
+      right: 65px
+      top: 45px
     &-logotype
-      margin-right: 45px
-      &-text
-        &__name
-          margin-bottom: 12px
-          font-size: 30px
-          line-height: 20px
-        &__caption
-          font-size: 16px
-      &__image
-        width: 129px
-        height: 98px
-    &-contacts
-      &__mail,&__phone
-        font-size: 20px
-    &-callback
-      font-size: 18px
-    &-callback
-      margin-right: 45px
+      top: 71px
+      left: 83px
+      width: 143px
+      height: 122px
+    &__castles
+      width: 820px
+      height: 235px
+      bottom: 191px
+  .main
     &-menu
-      &__item
-        font-size: 16px
-        white-space: nowrap
-  .padding
-    padding-right: 15px
-    padding-left: 15px
-  .footer
-    &-phones,&__address,&__mail
-      margin-right: 40px
-//@media (min-width: 1340px)
-//  .main-slider-image
-//    flex: 1 0 950px
-//  .main-slider .owl-stage-outer
-//    overflow: visible
-@media (min-width: 1340px)
-  .main-slider
-    &-container
-      .container
-        max-width: none
-    &-image
-      flex: 0 1 750px
-      margin-left: auto
-    &-left
-      flex: 1 0 750px
-      display: flex
-      flex-direction: column
-      align-items: flex-end
-      margin-right: -135px
-      margin-left: auto
-      background-position: right
+      &__logo
+        width: 125px
+        height: 107px
+        img
+          max-width: 100%
+    &-houses
+      max-width: 774px
+      margin: -30px auto 0
+      height: calc(100vh - 103px)
+      &__area
+        width: 257px
+        top: 292px
+        left: 253px
+        background-size: contain
+        background-repeat: no-repeat
+      &__tourist
+        top: 266px
+        left: 264px
+      &__woman
+        top: 401px
+        left: 381px
+    &-house
+      &:hover:before
+        background-size: contain!important
+      &:after
+        background-size: contain!important
+      &.gallery
+        width: 218px
+        height: 263px
+        top: 9px
+        left: 0
+        &:after
+          top: -1px
+          left: 1px
+      &.school
+        width: 353px
+        height: 245px
+        top: 18px
+        left: 207px
+        &:after
+          right: 5px
+      &.shop
+        width: 228px
+        height: 272px
+        top: 0
+        right: 0
+        &:after
+          top: 4px
+          left: 5px
+          bottom: 5px
+      &.showroom
+        width: 232px
+        height: 217px
+        top: 255px
+        left: 0
+        &:after
+          top: -22px
+          left: 4px
+          right: 4px
+      &.museum
+        width: 227px
+        height: 259px
+        top: 217px
+        right: 19px
+        &:after
+          right: 1px
+      &.theater
+        width: 227px
+        height: 242px
+        top: 427px
+        left: 86px
+        &:after
+          right: 3px
+      &.workshop
+        width: 218px
+        height: 236px
+        top: 438px
+        right: 106px
+        &:after
+          top: 4px
+          left: -5px
+          bottom: 5px
+  .popup
+    &-item
+      width: 450px
+      height: 260px
+      top: 200px
+      padding: 37px 28px 26px
+      text-align: center
       &__title
-        max-width: 890px
-        width: 100%
+        font-size: 30px
+        line-height: 20px
+        color: #bb4604
+        margin-bottom: 20px
       &__desc
-        width: 100%
-        max-width: 890px
-@media (min-width: 1920px)
-  .tour-examples-container
-    max-width: none
-  .tour-examples-card.only-xl
-    display: block
-  .tours-card-wrapper
-    flex: 0 1 25%
-    max-width: 25%
-  .tours-wrapper .container
-    max-width: 1730px
-  .main-slider .owl-prev
-    left: 55px
-  .main-slider .owl-next
-    right: 55px
+        font-size: 16px
+  .main-page-footer
+    max-width: 130px
+    font-weight: 400
+  .main-page
+    &:after
+      background: url("../../img/grey_streen_small_1.png") no-repeat
+      height: 590px
+      top: 176px
+      left: auto
+      width: 260px
+      right: 75%
+      background-position: right center
+    &:before
+      position: absolute
+      content: ''
+      background: url("../../img/grey_streen_small_2.png") no-repeat
+      height: 590px
+      top: 165px
+      width: 260px
+      left: 75%
+      background-position: left center
+  .inner-header
+    height: 193px
+    &:before
+      width: 476px
+      background: url("../../img/header_left_small.png") no-repeat
+      right: 55%
+      left: auto
+    &:after
+      width: 455px
+      background: url("../../img/header_right_small.png") no-repeat
+      right: auto
+      left: 65%
+  .inner-header
+    padding-top: 12px
+  .main-menu
+    &__logo
+      width: 112px
+      height: 96px
+    &__item
+      font-size: 18px
+      line-height: 20px
+      margin-right: 20px
+  .main-header-contacts--inner
+      top: 130px
+  .main-header-contacts--inner .main-header-contacts-right
+    flex-direction: column
+  .main-header-contacts__address, .main-header-contacts__phone,.main-header-contacts__mail
+    font-size: 13px
+    line-height: 17px
+  footer
+  .footer
+    padding: 38px 0 50px
+    align-items: center
+    &__logo
+      margin-right: 30px
+      svg
+        width: 94px
+        height: 82px
+    &-contacts
+      flex-shrink: 0
+      margin-right: 20px
+  .team
+    &-list
+      justify-content: center
+      margin: 0 -15px
+      &-item
+        margin: 0 15px 30px
+    &-page
+      padding-bottom: 525px
+      &:after
+        width: 664px
+        height: 451px
+        bottom: 34px
+        background-size: cover
+      &:before
+        height: 270px
+        bottom: 112px
+        background-size: cover
+  .content
+    blockquote
+      font-size: 22px
+      line-height: 29px
+    hr
+      background-position: center!important
+      margin: 34px auto
+      max-width: 100%
+  hr
+    background-position: center!important
+    margin: 34px auto
+    max-width: 100%
+  .news-main__image
+    flex: 0 0 370px
+  .news
+    &-main
+      &__desc
+        font-size: 18px
+        line-height: 24px
+    &-item
+      flex: 0 1 33.333%
+      max-width: 33.333%
+      &:nth-child(3n+3):after
+        content: none!important
+      &:nth-child(4n+4):before
+        right: -15px
+      &:after
+        content: '' !important
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0px
+        background: #D2AA83
+        width: 1px
+    &-list
+      &-hr
+        margin: 0 auto
+  .news__title
+    margin-bottom: 40px
+  .news-detail
+    padding-bottom: 48px
+  .history-gallery
+    &-item
+      max-width: 33%
+  .news-more
+    .news-item
+      &:after
+        content: none!important
+    &__separator
+      flex-shrink: 0
+  .form
+    &-status
+      margin: 0 auto 27px
+  .contacts
+    &-wrapper
+      padding: 32px 0 25px
+  .error-page .main-menu__logo
+    margin-left: 0!important
+  .main-menu__item+.main-menu__logo
+    margin-left: 0

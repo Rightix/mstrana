@@ -31,13 +31,15 @@ html {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 100%;
+    /*max-width: 720px;*/
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    /*max-width: 960px;*/
+    max-width: 100%;
   }
 }
 
@@ -63,13 +65,13 @@ html {
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
-    max-width: 720px;
+    max-width: 100%;
   }
 }
 
 @media (min-width: 992px) {
   .container, .container-sm, .container-md, .container-lg {
-    max-width: 960px;
+    max-width: 100%;
   }
 }
 
