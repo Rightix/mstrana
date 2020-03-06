@@ -2207,3 +2207,6 @@ footer {
   z-index: 120;
   -webkit-transition: .4s;
   transition: .4s; }
+
+.mobile-houses {
+  display: none; }
