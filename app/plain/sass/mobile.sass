@@ -62,8 +62,10 @@
     &-page
       height: 1024px
       position: relative
-    &-ground:after
+    &__ground:after
       bottom: -174px
+    &__ground
+      height: 308px
     &__sun
       display: none
     &-copyright,&-interso
@@ -168,22 +170,25 @@
     display: none
   .mobile-houses
     padding: 0 15px
+    display: block
   .mobile-house
     position: relative
     &:before
       content: ''
       position: absolute
       height: 200px
-      width: 276px
-      background: url("../../img/street_mobile_1.png") no-repeat
+      width: 400px
+      background: url("../../img/street_mobile.png") no-repeat
       background-position: center right
+      background-repeat-x: repeat
     &:after
       content: ''
       position: absolute
       height: 200px
-      width: 276px
-      background: url("../../img/street_mobile_1.png") no-repeat
+      width: 400px
+      background: url("../../img/street_mobile.png") no-repeat
       background-position: center left
+      background-repeat-x: repeat
     img
       max-width: 100%
     &__image
@@ -228,10 +233,11 @@
       z-index: 10
       &:before
         height: 247px
-        top: 63px
-        right: 47%
+        top: 80px
+        right: 38%
+        background-position: center right
       &:after
-        top: 63px
+        top: 80px
         left: 83%
         height: 247px
       .mobile-house__image
@@ -249,10 +255,10 @@
       z-index: 10
       &:before
         height: 247px
-        top: 63px
+        top: 80px
         right: 67%
       &:after
-        top: 63px
+        top: 80px
         height: 247px
         left: 45%
       .mobile-house__image
@@ -269,10 +275,10 @@
       z-index: 10
       &:before
         height: 247px
-        top: 63px
-        right: 67%
+        top: 35px
+        right: 52%
       &:after
-        top: 63px
+        top: 35px
         height: 247px
         left: 45%
       .mobile-house__image
@@ -281,11 +287,76 @@
         align-items: flex-start
         margin-left: auto
         margin-right: 0
-        margin-bottom: 0
+        margin-bottom: 8px
       .popup-item:before
         right: 100px
         left: auto
         transform: scale(-1,1)
+    &.museum
+      margin-top: -20px
+      z-index: 10
+      &:before
+        height: 247px
+        top: 77px
+        right: 67%
+      &:after
+        top: 75px
+        height: 247px
+        left: 40%
+      .mobile-house__image
+        width: 272px
+        height: 308px
+        align-items: flex-start
+        margin-left: 0
+        margin-right: auto
+      .popup-item:before
+        right: auto
+        left: 85px
+        //transform: scale(-1,1)
+    &.workshop
+      z-index: 10
+      margin-top: -10px
+      &:before
+        height: 247px
+        top: 35px
+        right: 52%
+      &:after
+        top: 35px
+        height: 247px
+        left: 45%
+      .mobile-house__image
+        width: 264px
+        height: 276px
+        align-items: flex-start
+        margin-left: auto
+        margin-right: 0
+        margin-bottom: 8px
+      .popup-item:before
+        right: 171px
+        left: auto
+        transform: scale(-1,1)
+    &.theater
+      margin-top: 10px
+      z-index: 10
+      margin-bottom: 46px
+      &:before
+        height: 247px
+        top: 50px
+        right: 67%
+      &:after
+        top: 50px
+        height: 247px
+        left: 40%
+      .mobile-house__image
+        width: 272px
+        height: 282px
+        align-items: flex-start
+        margin-left: 0
+        margin-right: auto
+      .popup-item:before
+        right: auto
+        left: 120px
+  //transform: scale(-1,1)
   .gallery_woman
     width: 50px
     height: 105px
@@ -295,3 +366,148 @@
     top: 210px
     z-index: 12
     position: absolute
+  .gallery_tourist
+    width: 74px
+    height: 102px
+    background: url("../../img/tourist.png") no-repeat
+    background-size: cover
+    right: 0
+    top: 210px
+    z-index: 12
+    position: absolute
+  .main-page-footer.mobile
+    display: block
+    position: relative
+    max-width: none
+    font-size: 13px
+    line-height: 19px
+    bottom: 0
+    margin-bottom: 36px
+    span
+      margin-bottom: 19px
+      &:last-child
+        margin-bottom: 0
+  .start-wrapper
+    min-height: 0
+    .main-menu
+      top: 0
+      left: 0
+      right: 0
+    .menu__trigger
+      &.active
+        background: url("../svg/burger_active.svg") no-repeat
+  .inner-header
+    margin-bottom: 0
+    border-bottom: 2px solid #A08255
+    height: 201px
+    &:after,&:before
+      content: none
+  .full-slider
+    &__item
+      background-position: center
+      height: 375px
+    .owl-nav
+      .owl-prev
+        left: 15px
+      .owl-next
+        right: 15px
+  h1
+    font-size: 36px
+    line-height: 40px
+  .history
+    &-body
+      padding-bottom: 56px
+      &__title
+        margin-bottom: 30px
+        font-size: 36px
+        line-height: 40px
+      &-text
+        flex: 0 1 auto
+        margin: 0
+        margin-bottom: 40px
+        p
+          font-size: 18px
+          line-height: 24px
+          margin-bottom: 24px
+          &:last-child
+            margin-bottom: 0
+      &-author
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        &-text
+          flex: 0 1 auto
+          order: 2
+          margin: 0
+        &__image
+          order: 1
+          flex: 0 1 auto
+          margin-bottom: 14px
+        &__caption
+          text-align: center
+          font-size: 15px
+          line-height: normal
+        &__name
+          text-align: center
+    &-gallery
+      padding: 0
+      position: relative
+      .container
+        max-width: none
+      .owl-dots
+        display: none
+      .owl-nav
+        display: none
+      &-list
+        display: block
+      &-item
+        max-width: 100%
+        margin: 0
+        padding: 0
+        width: 100%
+        &__image
+          height: 375px
+          background: url("../../img/gallery_bg.png") repeat
+          //padding: 35px 0
+          align-items: center
+          justify-content: center
+        &__caption
+          font-size: 15px
+          line-height: 20px
+          text-align: center
+          padding: 10px 15px 64px
+  .gallery-counter
+    font-size: 12px
+    position: absolute
+    font-weight: 700
+    line-height: 20px
+    text-align: center
+    color: #c4c4c4
+    bottom: 15px
+    left: 0
+    right: 0
+    margin: 0 auto
+    &__current:after
+      content: ' / '
+      position: relative
+  .footer
+    &-contacts
+      &__item
+        font-size: 14px
+  .team
+    &__title
+      font-size: 36px
+      line-height: 40px
+      margin-bottom: 35px
+    &-desc p
+      font-size: 18px
+      line-height: 24px
+    &-page
+      padding-bottom: 353px
+      &:after
+        width: 337px
+        height: 228px
+        bottom: 43px
+      &:before
+        height: 137px
+        bottom: 82px

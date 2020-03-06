@@ -81,6 +81,20 @@ $(document).ready(function() {
     $(".mobile-menu__close").on("click", function(e) {
       $(".main-menu.mobile").removeClass("active");
     });
+
+    $(".history-gallery-list").owlCarousel({
+      items: 1,
+      center: true,
+      onInitialized: galleryInit,
+      onChanged: galleryChanged
+    });
+    function galleryInit(e) {
+      $(".gallery-counter__current").html("1");
+      $(".gallery-counter__count").html(e.item.count + 1);
+    }
+    function galleryChanged(e) {
+      $(".gallery-counter__current").html(e.item.index + 1);
+    }
   }
 
   /*  $(".form__file input[type=file]").change(function () {

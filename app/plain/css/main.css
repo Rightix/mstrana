@@ -319,11 +319,6 @@ hr {
     letter-spacing: 0.06em;
     text-transform: uppercase; }
 
-.content ul {
-  margin: 6px 0;
-  margin-bottom: 0;
-  padding-left: 0px; }
-
 .content ul li {
   color: #000;
   margin-bottom: 3px;
@@ -805,6 +800,10 @@ label {
   position: absolute;
   z-index: 40; }
 
+.start-wrapper {
+  position: relative;
+  min-height: 1000px; }
+
 .main-page {
   background: url("../../img/bricks.png") repeat;
   position: relative;
@@ -1199,6 +1198,7 @@ label {
       width: 152px;
       height: 152px;
       overflow: hidden;
+      padding-right: 4px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1208,7 +1208,17 @@ label {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      border-radius: 50%; }
+      border-radius: 50%;
+      position: relative; }
+      .history-body-author__image:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: url("../svg/border.svg") no-repeat;
+        background-size: contain; }
       .history-body-author__image img {
         max-width: 100%; }
 
@@ -2210,3 +2220,13 @@ footer {
 
 .mobile-houses {
   display: none; }
+
+.start-wrapper .menu__trigger.active {
+  z-index: 150; }
+
+.footer-item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
