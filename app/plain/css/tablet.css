@@ -64,108 +64,6 @@
     height: 188px;
     top: 96px;
     right: 30px; }
-  .main-houses {
-    top: 55px;
-    max-width: 100%;
-    height: calc(100vh - 177px); }
-    .main-houses:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: url("../../img/houses_tablet.png") no-repeat;
-      background-position: center top; }
-    .main-houses__area {
-      margin: 0 auto;
-      left: 0;
-      right: 0; }
-    .main-houses__tourist {
-      right: 85px;
-      left: 0;
-      margin: 0 auto; }
-    .main-houses__woman {
-      top: 456px;
-      left: 22px;
-      right: 0;
-      margin: 0 auto; }
-  .main-house.school {
-    width: 315px;
-    height: 214px;
-    top: 5px;
-    left: 0;
-    right: 0;
-    margin: 0 auto; }
-    .main-house.school:after {
-      right: 8px;
-      left: 6px; }
-  .main-house.gallery {
-    width: 199px;
-    height: 236px;
-    top: 133px;
-    left: 47px; }
-  .main-house.shop {
-    width: 203px;
-    height: 248px;
-    top: 119px;
-    right: 44px;
-    left: auto; }
-    .main-house.shop:after {
-      right: 4px; }
-  .main-house.showroom {
-    width: 210px;
-    height: 195px;
-    top: 371px;
-    left: 42px; }
-    .main-house.showroom:after {
-      top: -20px; }
-  .main-house.museum {
-    width: 199px;
-    height: 232px;
-    top: 329px;
-    right: 42px;
-    left: auto; }
-  .main-house.theater {
-    width: 205px;
-    height: 216px;
-    top: 551px;
-    left: 116px; }
-    .main-house.theater:after {
-      right: 6px; }
-  .main-house.workshop {
-    width: 195px;
-    height: 210px;
-    top: 552px;
-    right: 129px;
-    left: auto; }
-  .main-page {
-    height: 100vh;
-    min-height: 1024px; }
-    .main-page-footer {
-      display: none; }
-    .main-page-footer.tablet {
-      max-width: none;
-      bottom: 13px;
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      font-size: 12px;
-      line-height: 17px;
-      color: #757575;
-      padding: 0 40px;
-      text-align: left; }
-      .main-page-footer.tablet span:first-of-type {
-        text-align: left; }
-      .main-page-footer.tablet span:last-child {
-        text-align: right;
-        margin-left: 20px; }
-    .main-page:after, .main-page:before {
-      content: none; }
   .popup-item {
     width: 270px;
     height: auto;
@@ -204,6 +102,244 @@
     .popup-item.workshop:before {
       right: -35px;
       bottom: -50px; }
+  .main-page {
+    height: auto;
+    min-height: 0; }
+    .main-page:before, .main-page:after {
+      content: none; }
+  .main-page-footer.tablet {
+    display: none; }
+  .main-houses {
+    display: none; }
+  .mobile-houses {
+    padding: 0 15px;
+    display: block; }
+  .mobile-house {
+    position: relative;
+    display: block;
+    text-decoration: none; }
+    .mobile-house:before {
+      content: '';
+      position: absolute;
+      height: 200px;
+      width: 700px;
+      background: url("../../img/street_mobile.png") no-repeat;
+      background-position: center right;
+      background-repeat-x: repeat; }
+    .mobile-house:after {
+      content: '';
+      position: absolute;
+      height: 200px;
+      width: 700px;
+      background: url("../../img/street_mobile.png") no-repeat;
+      background-position: center left;
+      background-repeat-x: repeat; }
+    .mobile-house img {
+      max-width: 100%; }
+    .mobile-house__image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0 auto 14px;
+      z-index: 5;
+      position: relative; }
+    .mobile-house .popup-item {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      padding: 32px 20px 30px;
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+      z-index: 6; }
+      .mobile-house .popup-item:before {
+        content: '';
+        background: url("../svg/mobile_popup.svg") no-repeat;
+        width: 24px;
+        height: 35px;
+        position: absolute;
+        top: -34px; }
+      .mobile-house .popup-item__desc {
+        color: #000; }
+    .mobile-house.school:before {
+      top: 17px;
+      right: 60%; }
+    .mobile-house.school:after {
+      top: 0;
+      left: 61%; }
+    .mobile-house.school .mobile-house__image {
+      width: 348px;
+      height: 239px; }
+    .mobile-house.school .popup-item:before {
+      left: 106px;
+      right: 200px;
+      margin: 0 auto; }
+    .mobile-house.gallery {
+      margin-top: -20px;
+      z-index: 10; }
+      .mobile-house.gallery:before {
+        height: 247px;
+        top: 80px;
+        right: 27%;
+        background-position: center right; }
+      .mobile-house.gallery:after {
+        top: 80px;
+        left: 83%;
+        height: 247px; }
+      .mobile-house.gallery .mobile-house__image {
+        width: 267px;
+        height: 322px;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        margin-left: auto;
+        margin-right: 0; }
+      .mobile-house.gallery .popup-item:before {
+        left: auto;
+        right: 60px;
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1); }
+    .mobile-house.shop {
+      margin-top: -20px;
+      z-index: 10; }
+      .mobile-house.shop:before {
+        height: 247px;
+        top: 80px;
+        right: 87%; }
+      .mobile-house.shop:after {
+        top: 80px;
+        height: 247px;
+        left: 27%; }
+      .mobile-house.shop .mobile-house__image {
+        width: 268px;
+        height: 322px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: auto; }
+      .mobile-house.shop .popup-item:before {
+        right: auto;
+        left: 100px; }
+    .mobile-house.showroom {
+      z-index: 10; }
+      .mobile-house.showroom:before {
+        height: 247px;
+        top: 35px;
+        right: 52%; }
+      .mobile-house.showroom:after {
+        top: 35px;
+        height: 247px;
+        left: 45%; }
+      .mobile-house.showroom .mobile-house__image {
+        width: 273px;
+        height: 286px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 8px; }
+      .mobile-house.showroom .popup-item:before {
+        right: 100px;
+        left: auto;
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1); }
+    .mobile-house.museum {
+      margin-top: -20px;
+      z-index: 10; }
+      .mobile-house.museum:before {
+        height: 247px;
+        top: 77px;
+        right: 80%; }
+      .mobile-house.museum:after {
+        top: 75px;
+        height: 247px;
+        left: 22%; }
+      .mobile-house.museum .mobile-house__image {
+        width: 272px;
+        height: 308px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: auto; }
+      .mobile-house.museum .popup-item:before {
+        right: auto;
+        left: 85px; }
+    .mobile-house.workshop {
+      z-index: 10;
+      margin-top: -10px; }
+      .mobile-house.workshop:before {
+        height: 247px;
+        top: 35px;
+        right: 52%; }
+      .mobile-house.workshop:after {
+        top: 35px;
+        height: 247px;
+        left: 45%; }
+      .mobile-house.workshop .mobile-house__image {
+        width: 264px;
+        height: 276px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 8px; }
+      .mobile-house.workshop .popup-item:before {
+        right: 171px;
+        left: auto;
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1); }
+    .mobile-house.theater {
+      margin-top: 10px;
+      z-index: 10;
+      margin-bottom: 46px; }
+      .mobile-house.theater:before {
+        height: 247px;
+        top: 50px;
+        right: 83%; }
+      .mobile-house.theater:after {
+        top: 50px;
+        height: 247px;
+        left: 28%; }
+      .mobile-house.theater .mobile-house__image {
+        width: 272px;
+        height: 282px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: auto; }
+      .mobile-house.theater .popup-item:before {
+        right: auto;
+        left: 120px; }
+  .gallery_woman {
+    width: 50px;
+    height: 105px;
+    background: url("../../img/woman.png") no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 210px;
+    z-index: 12;
+    position: absolute; }
+  .gallery_tourist {
+    width: 74px;
+    height: 102px;
+    background: url("../../img/tourist.png") no-repeat;
+    background-size: cover;
+    right: 0;
+    top: 210px;
+    z-index: 12;
+    position: absolute; }
   .history-gallery-item {
     max-width: 50%; }
   footer .container {
@@ -270,4 +406,11 @@
   .error-body__desc {
     text-align: center; }
   .error-page .container {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .news-list-wrapper .container {
+    max-width: none; }
+  .door__left {
+    left: 325px; }
+  .door__right {
+    height: 98px;
+    right: 258px; } }

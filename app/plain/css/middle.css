@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px), screen and (max-height: 936px) {
   .start__ground {
     height: 200px; }
   .start__castle {
@@ -129,14 +129,30 @@
       left: -5px;
       bottom: 5px; }
   .popup-item {
-    width: 450px;
+    width: 350px;
     height: 260px;
     top: 200px;
+    bottom: auto;
+    height: auto;
     padding: 37px 28px 26px;
     text-align: center; }
+    .popup-item:before {
+      z-index: -1; }
+    .popup-item.gallery:before {
+      top: -10px;
+      left: -50px; }
+    .popup-item.shop:before {
+      top: -10px;
+      right: -60px; }
+    .popup-item.theater:before {
+      bottom: -60px;
+      left: -5px; }
+    .popup-item.workshop:before {
+      bottom: -60px;
+      right: -5px; }
     .popup-item__title {
       font-size: 30px;
-      line-height: 20px;
+      line-height: normal;
       color: #bb4604;
       margin-bottom: 20px; }
     .popup-item__desc {
@@ -147,19 +163,20 @@
   .main-page:after {
     background: url("../../img/grey_streen_small_1.png") no-repeat;
     height: 590px;
-    top: 176px;
+    top: 151px;
     left: auto;
-    width: 260px;
-    right: 75%;
+    width: 100%;
+    background-repeat: repeat-x;
+    right: 67%;
     background-position: right center; }
   .main-page:before {
     position: absolute;
     content: '';
     background: url("../../img/grey_streen_small_2.png") no-repeat;
     height: 590px;
-    top: 165px;
-    width: 260px;
-    left: 75%;
+    top: 147px;
+    width: 100%;
+    left: 65%;
     background-position: left center; }
   .inner-header {
     height: 193px; }
@@ -279,4 +296,20 @@
   .error-page .main-menu__logo {
     margin-left: 0 !important; }
   .main-menu__item + .main-menu__logo {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .door__left {
+    width: 40px;
+    left: 319px;
+    height: 97px;
+    bottom: 45px; }
+  .door__right {
+    width: 40px;
+    height: 97px;
+    bottom: 44px;
+    right: 250px; }
+  .start__castle:hover .door__left {
+    -webkit-transform: rotateY(-180deg) translateX(38px);
+    transform: rotateY(-180deg) translateX(38px); }
+  .start__castle:hover .door__right {
+    -webkit-transform: rotateY(180deg) translateX(-26px);
+    transform: rotateY(180deg) translateX(-26px); } }

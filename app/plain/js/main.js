@@ -3,7 +3,7 @@ $(document).ready(function() {
   svg4everybody();
   fullSlider();
   mainPopup();
-
+  startLink();
   function fullSlider() {
     $(".full-slider").owlCarousel({
       items: 1,
@@ -97,10 +97,15 @@ $(document).ready(function() {
     }
   }
 
-  /*  $(".form__file input[type=file]").change(function () {
-            var filename = $(this).val().replace(/.*\\/, "");
-            console.log(filename)
-            $(this).siblings(".form__file-name").fadeIn().val(filename);
-        });
-    */
+  function startLink() {
+    let url = $(".start__castle").attr("href");
+    $(".start__castle").on("click", function(e) {
+      e.preventDefault();
+      setTimeout(moveToLink, 1000);
+      $(".start-wrapper").addClass("active");
+    });
+    function moveToLink() {
+      location.href = url;
+    }
+  }
 });

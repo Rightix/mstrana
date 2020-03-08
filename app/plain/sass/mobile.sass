@@ -22,7 +22,7 @@
       height: 319px
       background: url("../../img/start_road_mobile.png") no-repeat
       background-size: contain
-      right: -46px
+      right: -75px
     &__castles
       width: 610px
       height: 300px
@@ -135,7 +135,6 @@
     transition: .4s opacity
     &.mobile
       display: flex
-      z-index: -1
       .main-menu__logo
         display: none
     &__item
@@ -177,7 +176,7 @@
       content: ''
       position: absolute
       height: 200px
-      width: 400px
+      width: 500px
       background: url("../../img/street_mobile.png") no-repeat
       background-position: center right
       background-repeat-x: repeat
@@ -185,7 +184,7 @@
       content: ''
       position: absolute
       height: 200px
-      width: 400px
+      width: 500px
       background: url("../../img/street_mobile.png") no-repeat
       background-position: center left
       background-repeat-x: repeat
@@ -217,10 +216,10 @@
     &.school
       &:before
         top: 17px
-        right: 70%
+        right: 63%
       &:after
         top: 0
-        left: 61%
+        left: 56%
       .mobile-house__image
         width: 348px
         height: 239px
@@ -234,7 +233,7 @@
       &:before
         height: 247px
         top: 80px
-        right: 38%
+        right: 32%
         background-position: center right
       &:after
         top: 80px
@@ -256,11 +255,11 @@
       &:before
         height: 247px
         top: 80px
-        right: 67%
+        right: 80%
       &:after
         top: 80px
         height: 247px
-        left: 45%
+        left: 34%
       .mobile-house__image
         width: 268px
         height: 322px
@@ -298,11 +297,11 @@
       &:before
         height: 247px
         top: 77px
-        right: 67%
+        right: 79%
       &:after
         top: 75px
         height: 247px
-        left: 40%
+        left: 34%
       .mobile-house__image
         width: 272px
         height: 308px
@@ -342,11 +341,13 @@
       &:before
         height: 247px
         top: 50px
-        right: 67%
+        right: 75%
+        width: 500px
       &:after
         top: 50px
         height: 247px
-        left: 40%
+        left: 33%
+        width: 500px
       .mobile-house__image
         width: 272px
         height: 282px
@@ -511,3 +512,88 @@
       &:before
         height: 137px
         bottom: 82px
+  .static
+    &-slider-item
+      &__caption
+        font-size: 20px
+        line-height: 28px
+  .float-right,.float-left
+    float: none
+    margin: 0 auto 30px!important
+  .news
+    &-main
+      margin: 0 -15px 30px
+      padding: 0 15px 30px
+      &__image
+        flex: 0 0 auto
+    &-list
+      &-wrapper
+        padding-bottom: 65px
+    &-item
+      max-width: 100%
+      flex: 0 1 100%
+      padding-bottom: 35px
+      margin-bottom: 38px
+      padding-top: 2px
+      &:after
+        content: none!important
+      &:before
+        right: 15px!important
+        left: 15px!important
+        bottom: 0
+        height: 1px
+      &.last:before
+        content: ''
+        right: 15px
+        left: 15px
+        bottom: 0
+        height: 1px
+        position: absolute
+        background: #d2aa83
+      &:last-child:before
+        content: none
+  .pagination
+    flex-direction: column
+    align-items: center
+    &__prev
+      margin-bottom: 50px
+  .news-detail
+    &__image
+      margin: 0 -15px 35px
+  .news-more
+    display: none
+  .news-footer
+    padding-bottom: 25px
+  .contacts
+    &-row
+      padding-top: 55px
+      flex-direction: column
+      align-items: center
+      padding-bottom: 0
+    &-item
+      margin-bottom: 34px
+      flex: 0 1 auto
+  .form__title
+    margin: 0 auto 32px
+  .door__left
+    width: 44px
+    left: 30px
+    right: 0
+    height: 105px
+    margin: 0 auto
+    bottom: 48px
+  .door__right
+    width: 44px
+    left: 0
+    right: -105px
+    height: 105px
+    margin: 0 auto
+    bottom: 47px
+  .start__castle:hover
+    .door__left
+      transform: rotateY(-180deg) translateX(38px)
+    .door__right
+      transform: rotateY(180deg) translateX(-26px)
+  .start__castle
+    &:after
+      background-position: center

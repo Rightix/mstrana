@@ -1,5 +1,9 @@
 "use strict";
 $(document).ready(function() {
+  function t() {
+    location.href = e;
+  }
+  var e;
   if (
     (svg4everybody(),
     $(".full-slider").owlCarousel({
@@ -18,6 +22,12 @@ $(document).ready(function() {
       .on("mouseleave", function(e) {
         $(".popup-item").removeClass("active");
       }),
+    (e = $(".start__castle").attr("href")),
+    $(".start__castle").on("click", function(e) {
+      e.preventDefault(),
+        setTimeout(t, 1e3),
+        $(".start-wrapper").addClass("active");
+    }),
     $(".burger-button").on("click", function(e) {
       $(".header-menu").toggleClass("active"), $(this).toggleClass("active");
     }),

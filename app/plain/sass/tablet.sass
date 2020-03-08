@@ -65,107 +65,107 @@
       height: 188px
       top: 96px
       right: 30px
-  .main
-    &-houses
-      top: 55px
-      max-width: 100%
-      height: calc(100vh - 177px)
-      &:before
-        content: ''
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
-        background: url("../../img/houses_tablet.png") no-repeat
-        background-position: center top
-      &__area
-        margin: 0 auto
-        left: 0
-        right: 0
-      &__tourist
-        right: 85px
-        left: 0
-        margin: 0 auto
-      &__woman
-        top: 456px
-        left: 22px
-        right: 0
-        margin: 0 auto
-    &-house
-      &.school
-        width: 315px
-        height: 214px
-        top: 5px
-        left: 0
-        right: 0
-        margin: 0 auto
-        &:after
-          right: 8px
-          left: 6px
-      &.gallery
-        width: 199px
-        height: 236px
-        top: 133px
-        left: 47px
-      &.shop
-        width: 203px
-        height: 248px
-        top: 119px
-        right: 44px
-        left: auto
-        &:after
-          right: 4px
-      &.showroom
-        width: 210px
-        height: 195px
-        top: 371px
-        left: 42px
-        &:after
-          top: -20px
-      &.museum
-        width: 199px
-        height: 232px
-        top: 329px
-        right: 42px
-        left: auto
-      &.theater
-        width: 205px
-        height: 216px
-        top: 551px
-        left: 116px
-        &:after
-          right: 6px
-      &.workshop
-        width: 195px
-        height: 210px
-        top: 552px
-        right: 129px
-        left: auto
-    &-page
-      height: 100vh
-      min-height: 1024px
-      &-footer
-        display: none
-      &-footer.tablet
-        max-width: none
-        bottom: 13px
-        width: 100%
-        display: flex
-        justify-content: space-between
-        font-size: 12px
-        line-height: 17px
-        color: #757575
-        padding: 0 40px
-        text-align: left
-        span
-          &:first-of-type
-            text-align: left
-          &:last-child
-            text-align: right
-            margin-left: 20px
-      &:after,&:before
-        content: none
+  //.main
+  //  &-houses
+  //    top: 55px
+  //    max-width: 100%
+  //    height: calc(100vh - 177px)
+  //    &:before
+  //      content: ''
+  //      position: absolute
+  //      top: 0
+  //      bottom: 0
+  //      left: 0
+  //      right: 0
+  //      background: url("../../img/houses_tablet.png") no-repeat
+  //      background-position: center top
+  //    &__area
+  //      margin: 0 auto
+  //      left: 0
+  //      right: 0
+  //    &__tourist
+  //      right: 85px
+  //      left: 0
+  //      margin: 0 auto
+  //    &__woman
+  //      top: 456px
+  //      left: 22px
+  //      right: 0
+  //      margin: 0 auto
+  //  &-house
+  //    &.school
+  //      width: 315px
+  //      height: 214px
+  //      top: 5px
+  //      left: 0
+  //      right: 0
+  //      margin: 0 auto
+  //      &:after
+  //        right: 8px
+  //        left: 6px
+  //    &.gallery
+  //      width: 199px
+  //      height: 236px
+  //      top: 133px
+  //      left: 47px
+  //    &.shop
+  //      width: 203px
+  //      height: 248px
+  //      top: 119px
+  //      right: 44px
+  //      left: auto
+  //      &:after
+  //        right: 4px
+  //    &.showroom
+  //      width: 210px
+  //      height: 195px
+  //      top: 371px
+  //      left: 42px
+  //      &:after
+  //        top: -20px
+  //    &.museum
+  //      width: 199px
+  //      height: 232px
+  //      top: 329px
+  //      right: 42px
+  //      left: auto
+  //    &.theater
+  //      width: 205px
+  //      height: 216px
+  //      top: 551px
+  //      left: 116px
+  //      &:after
+  //        right: 6px
+  //    &.workshop
+  //      width: 195px
+  //      height: 210px
+  //      top: 552px
+  //      right: 129px
+  //      left: auto
+  //  &-page
+  //    height: 100vh
+  //    min-height: 1024px
+  //    &-footer
+  //      display: none
+  //    &-footer.tablet
+  //      max-width: none
+  //      bottom: 13px
+  //      width: 100%
+  //      display: flex
+  //      justify-content: space-between
+  //      font-size: 12px
+  //      line-height: 17px
+  //      color: #757575
+  //      padding: 0 40px
+  //      text-align: left
+  //      span
+  //        &:first-of-type
+  //          text-align: left
+  //        &:last-child
+  //          text-align: right
+  //          margin-left: 20px
+  //    &:after,&:before
+  //      content: none
   .popup
     &-item
       width: 270px
@@ -205,6 +205,227 @@
       &.workshop:before
         right: -35px
         bottom: -50px
+  .main-page
+    height: auto
+    min-height: 0
+    &:before,&:after
+      content: none
+  .main-page-footer.tablet
+    display: none
+  .main-houses
+    display: none
+  .mobile-houses
+    padding: 0 15px
+    display: block
+  .mobile-house
+    position: relative
+    display: block
+    text-decoration: none
+    &:before
+      content: ''
+      position: absolute
+      height: 200px
+      //width: 400px
+      width: 700px
+      background: url("../../img/street_mobile.png") no-repeat
+      background-position: center right
+      background-repeat-x: repeat
+    &:after
+      content: ''
+      position: absolute
+      height: 200px
+      width: 700px
+      background: url("../../img/street_mobile.png") no-repeat
+      background-position: center left
+      background-repeat-x: repeat
+    img
+      max-width: 100%
+    &__image
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin: 0 auto 14px
+      z-index: 5
+      position: relative
+    .popup-item
+      position: relative
+      max-width: 100%
+      width: 100%
+      padding: 32px 20px 30px
+      top: 0
+      bottom: 0
+      opacity: 1
+      z-index: 6
+      &:before
+        content: ''
+        background: url("../svg/mobile_popup.svg") no-repeat
+        width: 24px
+        height: 35px
+        position: absolute
+        top: -34px
+      &__desc
+        color: #000
+    &.school
+      &:before
+        top: 17px
+        right: 60%
+      &:after
+        top: 0
+        left: 61%
+      .mobile-house__image
+        width: 348px
+        height: 239px
+      .popup-item:before
+        left: 106px
+        right: 200px
+        margin: 0 auto
+    &.gallery
+      margin-top: -20px
+      z-index: 10
+      &:before
+        height: 247px
+        top: 80px
+        right: 27%
+        background-position: center right
+      &:after
+        top: 80px
+        left: 83%
+        height: 247px
+      .mobile-house__image
+        width: 267px
+        height: 322px
+        align-items: flex-end
+        margin-left: auto
+        margin-right: 0
+      .popup-item:before
+        left: auto
+        right: 60px
+        transform: scale(-1,1)
+    &.shop
+      margin-top: -20px
+      z-index: 10
+      &:before
+        height: 247px
+        top: 80px
+        right: 87%
+      &:after
+        top: 80px
+        height: 247px
+        left: 27%
+      .mobile-house__image
+        width: 268px
+        height: 322px
+        align-items: flex-start
+        margin-left: 0
+        margin-right: auto
+      .popup-item:before
+        right: auto
+        left: 100px
+    //transform: scale(-1,1)
+    &.showroom
+      z-index: 10
+      &:before
+        height: 247px
+        top: 35px
+        right: 52%
+      &:after
+        top: 35px
+        height: 247px
+        left: 45%
+      .mobile-house__image
+        width: 273px
+        height: 286px
+        align-items: flex-start
+        margin-left: auto
+        margin-right: 0
+        margin-bottom: 8px
+      .popup-item:before
+        right: 100px
+        left: auto
+        transform: scale(-1,1)
+    &.museum
+      margin-top: -20px
+      z-index: 10
+      &:before
+        height: 247px
+        top: 77px
+        right: 80%
+      &:after
+        top: 75px
+        height: 247px
+        left: 22%
+      .mobile-house__image
+        width: 272px
+        height: 308px
+        align-items: flex-start
+        margin-left: 0
+        margin-right: auto
+      .popup-item:before
+        right: auto
+        left: 85px
+    //transform: scale(-1,1)
+    &.workshop
+      z-index: 10
+      margin-top: -10px
+      &:before
+        height: 247px
+        top: 35px
+        right: 52%
+      &:after
+        top: 35px
+        height: 247px
+        left: 45%
+      .mobile-house__image
+        width: 264px
+        height: 276px
+        align-items: flex-start
+        margin-left: auto
+        margin-right: 0
+        margin-bottom: 8px
+      .popup-item:before
+        right: 171px
+        left: auto
+        transform: scale(-1,1)
+    &.theater
+      margin-top: 10px
+      z-index: 10
+      margin-bottom: 46px
+      &:before
+        height: 247px
+        top: 50px
+        right: 83%
+      &:after
+        top: 50px
+        height: 247px
+        left: 28%
+      .mobile-house__image
+        width: 272px
+        height: 282px
+        align-items: flex-start
+        margin-left: 0
+        margin-right: auto
+      .popup-item:before
+        right: auto
+        left: 120px
+  //transform: scale(-1,1)
+  .gallery_woman
+    width: 50px
+    height: 105px
+    background: url("../../img/woman.png") no-repeat
+    background-size: cover
+    left: 0
+    top: 210px
+    z-index: 12
+    position: absolute
+  .gallery_tourist
+    width: 74px
+    height: 102px
+    background: url("../../img/tourist.png") no-repeat
+    background-size: cover
+    right: 0
+    top: 210px
+    z-index: 12
+    position: absolute
   .history-gallery
     &-item
       max-width: 50%
@@ -256,3 +477,10 @@
   .error-page
     .container
       max-width: 100%
+  .news-list-wrapper .container
+    max-width: none
+  .door__left
+    left: 325px
+  .door__right
+    height: 98px
+    right: 258px
